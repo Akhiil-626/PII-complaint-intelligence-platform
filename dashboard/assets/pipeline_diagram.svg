@@ -1,0 +1,43 @@
+<svg width="840" height="150" xmlns="http://www.w3.org/2000/svg">
+  <!-- Styles -->
+  <style>
+    .box { fill: #f0f2f6; stroke: #31333F; stroke-width: 2; rx: 10; ry: 10; }
+    .text { font-family: sans-serif; font-size: 14px; fill: #31333F; text-anchor: middle; font-weight: bold;}
+    .arrow { stroke: #31333F; stroke-width: 2; fill: none; }
+    .arrowhead { fill: #31333F; }
+  </style>
+  
+  <!-- Arrow Marker -->
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" class="arrowhead" />
+    </marker>
+  </defs>
+
+  <!-- Complaint -->
+  <rect x="5" y="55" width="110" height="40" class="box" />
+  <text x="60" y="80" class="text">Complaint</text>
+  <path d="M 115 75 L 140 75" class="arrow" marker-end="url(#arrow)" />
+
+  <!-- PII Redaction -->
+  <rect x="145" y="55" width="140" height="40" class="box" />
+  <text x="215" y="80" class="text">PII Redaction</text>
+  <path d="M 285 75 L 310 75" class="arrow" marker-end="url(#arrow)" />
+
+  <!-- Three-Model Classification -->
+  <rect x="315" y="40" width="160" height="70" class="box" />
+  <text x="395" y="65" class="text">Three-Model</text>
+  <text x="395" y="90" class="text">Classification</text>
+  <path d="M 475 75 L 500 75" class="arrow" marker-end="url(#arrow)" />
+
+  <!-- Disagreement Detection -->
+  <rect x="505" y="40" width="180" height="70" class="box" />
+  <text x="595" y="65" class="text">Disagreement</text>
+  <text x="595" y="90" class="text">Detection</text>
+  <path d="M 685 75 L 710 75" class="arrow" marker-end="url(#arrow)" />
+
+  <!-- Final Classification -->
+  <rect x="715" y="40" width="120" height="70" class="box" />
+  <text x="775" y="65" class="text">Final</text>
+  <text x="775" y="90" class="text">Result</text>
+</svg>

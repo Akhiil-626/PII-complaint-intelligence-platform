@@ -1,0 +1,1022 @@
+[
+  {
+    "id": "complaint_0001",
+    "complaint_text": "My name is Rahul Sharma and I am extremely frustrated with the service I have received. I was charged twice for my monthly subscription on my credit card 4111 1111 1111 1111 linked to account ACC-10023456. I have already raised complaint CMP-2026-00001 but got no response. Please verify my identity using Aadhaar 1234 5678 9012 and resolve this immediately. You can reach me at rahul.sharma@gmail.com or call +91 9876543210. I expect a refund within 48 hours or I will escalate this to the banking ombudsman.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Rahul Sharma"
+      },
+      {
+        "type": "EMAIL_ADDRESS",
+        "text": "rahul.sharma@gmail.com"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "text": "+91 9876543210"
+      },
+      {
+        "type": "ACCOUNT_NUMBER",
+        "text": "ACC-10023456"
+      },
+      {
+        "type": "AADHAAR_NUMBER",
+        "text": "1234 5678 9012"
+      },
+      {
+        "type": "COMPLAINT_ID",
+        "text": "CMP-2026-00001"
+      },
+      {
+        "type": "CREDIT_CARD",
+        "text": "4111 1111 1111 1111"
+      }
+    ]
+  },
+  {
+    "id": "complaint_0002",
+    "complaint_text": "Dear Sir/Madam, I am writing to formally report an unauthorized transaction on my mortgage account. My name is Priya Nair, and the deduction appeared against account ACC-20034567. This matter has been logged under complaint reference CMP-2026-00002. My Aadhaar number is 2234 6789 0123 for verification purposes. The transaction was made using credit card 4222 2222 2222 2222. Kindly contact me at priya.nair@outlook.com or +91 8765432109 at your earliest convenience so this can be resolved before my next EMI cycle begins.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Priya Nair"
+      },
+      {
+        "type": "EMAIL_ADDRESS",
+        "text": "priya.nair@outlook.com"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "text": "+91 8765432109"
+      },
+      {
+        "type": "ACCOUNT_NUMBER",
+        "text": "ACC-20034567"
+      },
+      {
+        "type": "AADHAAR_NUMBER",
+        "text": "2234 6789 0123"
+      },
+      {
+        "type": "COMPLAINT_ID",
+        "text": "CMP-2026-00002"
+      },
+      {
+        "type": "CREDIT_CARD",
+        "text": "4222 2222 2222 2222"
+      }
+    ]
+  },
+  {
+    "id": "complaint_0003",
+    "complaint_text": "This is absolutely unacceptable. I, John Mathews, have been trying to get my personal loan issue fixed for THREE weeks now with zero progress. My account ACC-30045678 shows an incorrect EMI deduction and nobody at your call center seems to know anything. Complaint CMP-2026-00003 was filed on Monday and completely ignored. My Aadhaar is 3345 7890 1234 and the card used was 4333 3333 3333 3333. Call me back at +91 7654321098 or email john.mathews@yahoo.com immediately.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "John Mathews"
+      },
+      {
+        "type": "EMAIL_ADDRESS",
+        "text": "john.mathews@yahoo.com"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "text": "+91 7654321098"
+      },
+      {
+        "type": "ACCOUNT_NUMBER",
+        "text": "ACC-30045678"
+      },
+      {
+        "type": "AADHAAR_NUMBER",
+        "text": "3345 7890 1234"
+      },
+      {
+        "type": "COMPLAINT_ID",
+        "text": "CMP-2026-00003"
+      },
+      {
+        "type": "CREDIT_CARD",
+        "text": "4333 3333 3333 3333"
+      }
+    ]
+  },
+  {
+    "id": "complaint_0004",
+    "complaint_text": "Hello, my name is Ananya Iyer. I recently noticed a fraudulent charge on my bank account linked with account number ACC-40056789. The transaction was carried out using my credit card 4444 4444 4444 4444 without my consent. I have already reported this under complaint CMP-2026-00004 and submitted my Aadhaar 4456 8901 2345 for KYC verification. Please investigate this as soon as possible. My contact details are ananya.iyer@gmail.com and +91 9988776655. I appreciate your prompt attention to this fraud case.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Ananya Iyer"
+      },
+      {
+        "type": "EMAIL_ADDRESS",
+        "text": "ananya.iyer@gmail.com"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "text": "+91 9988776655"
+      },
+      {
+        "type": "ACCOUNT_NUMBER",
+        "text": "ACC-40056789"
+      },
+      {
+        "type": "AADHAAR_NUMBER",
+        "text": "4456 8901 2345"
+      },
+      {
+        "type": "COMPLAINT_ID",
+        "text": "CMP-2026-00004"
+      },
+      {
+        "type": "CREDIT_CARD",
+        "text": "4444 4444 4444 4444"
+      }
+    ]
+  },
+  {
+    "id": "complaint_0005",
+    "complaint_text": "To whom it may concern, I am submitting this complaint regarding a delayed insurance refund. My name is David Fernandes and my policy is linked to account ACC-50067890. The refund request was logged as complaint CMP-2026-00005 nearly a month ago. My Aadhaar number for identity verification is 5567 9012 3456, and the premium was originally paid via credit card 4555 5555 5555 5555. Please update me at david.fernandes@outlook.com or +91 9123456780. I would appreciate a swift resolution to this matter.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "David Fernandes"
+      },
+      {
+        "type": "EMAIL_ADDRESS",
+        "text": "david.fernandes@outlook.com"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "text": "+91 9123456780"
+      },
+      {
+        "type": "ACCOUNT_NUMBER",
+        "text": "ACC-50067890"
+      },
+      {
+        "type": "AADHAAR_NUMBER",
+        "text": "5567 9012 3456"
+      },
+      {
+        "type": "COMPLAINT_ID",
+        "text": "CMP-2026-00005"
+      },
+      {
+        "type": "CREDIT_CARD",
+        "text": "4555 5555 5555 5555"
+      }
+    ]
+  },
+  {
+    "id": "complaint_0006",
+    "complaint_text": "I can't believe how badly this has been handled. My name is Sneha Kulkarni and I use Buy Now Pay Later services through your platform. Two installments were deducted for the same order under account ACC-60078901. I filed complaint CMP-2026-00006 five days ago and still no update! My Aadhaar is 6678 0123 4567 and the transaction card ending shows 4666 6666 6666 6666. Reach me at sneha.kulkarni@gmail.com or +91 8899001122. Fix this today, please.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Sneha Kulkarni"
+      },
+      {
+        "type": "EMAIL_ADDRESS",
+        "text": "sneha.kulkarni@gmail.com"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "text": "+91 8899001122"
+      },
+      {
+        "type": "ACCOUNT_NUMBER",
+        "text": "ACC-60078901"
+      },
+      {
+        "type": "AADHAAR_NUMBER",
+        "text": "6678 0123 4567"
+      },
+      {
+        "type": "COMPLAINT_ID",
+        "text": "CMP-2026-00006"
+      },
+      {
+        "type": "CREDIT_CARD",
+        "text": "4666 6666 6666 6666"
+      }
+    ]
+  },
+  {
+    "id": "complaint_0007",
+    "complaint_text": "Good afternoon, I am Michael Thompson and I would like to report a failed money transfer from my account ACC-70089012. The amount was debited but never credited to the recipient, and I have logged this as complaint CMP-2026-00007. For verification, my Aadhaar number is 7789 1234 5678, and the transaction was initiated using credit card 4777 7777 7777 7777. Please contact me at michael.thompson@yahoo.com or +91 7012345678 so we can resolve this quickly. Thank you for your assistance.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Michael Thompson"
+      },
+      {
+        "type": "EMAIL_ADDRESS",
+        "text": "michael.thompson@yahoo.com"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "text": "+91 7012345678"
+      },
+      {
+        "type": "ACCOUNT_NUMBER",
+        "text": "ACC-70089012"
+      },
+      {
+        "type": "AADHAAR_NUMBER",
+        "text": "7789 1234 5678"
+      },
+      {
+        "type": "COMPLAINT_ID",
+        "text": "CMP-2026-00007"
+      },
+      {
+        "type": "CREDIT_CARD",
+        "text": "4777 7777 7777 7777"
+      }
+    ]
+  },
+  {
+    "id": "complaint_0008",
+    "complaint_text": "This is Kavita Reddy writing about an ongoing issue with mobile banking. My account ACC-80090123 keeps showing login failures, and when I finally accessed it, an unauthorized EMI deduction appeared using card 4888 8888 8888 8888. Complaint CMP-2026-00008 has been open for over a week now. My Aadhaar is 8890 2345 6789 for reference. Please email me at kavita.reddy@gmail.com or call +91 9345678901 as this is affecting my monthly budget significantly.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Kavita Reddy"
+      },
+      {
+        "type": "EMAIL_ADDRESS",
+        "text": "kavita.reddy@gmail.com"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "text": "+91 9345678901"
+      },
+      {
+        "type": "ACCOUNT_NUMBER",
+        "text": "ACC-80090123"
+      },
+      {
+        "type": "AADHAAR_NUMBER",
+        "text": "8890 2345 6789"
+      },
+      {
+        "type": "COMPLAINT_ID",
+        "text": "CMP-2026-00008"
+      },
+      {
+        "type": "CREDIT_CARD",
+        "text": "4888 8888 8888 8888"
+      }
+    ]
+  },
+  {
+    "id": "complaint_0009",
+    "complaint_text": "Hi team, this is Arjun Verma. I noticed that my wallet payment app charged me twice for the same purchase, deducting funds from account ACC-90001234. I have raised this under complaint CMP-2026-00009. My Aadhaar number is 9901 2345 6780 and the card linked to the wallet is 4999 9999 9999 9999. Please get back to me at arjun.verma@outlook.com or +91 9001122334 soon, as this discrepancy is affecting my monthly expense tracking quite a bit.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Arjun Verma"
+      },
+      {
+        "type": "EMAIL_ADDRESS",
+        "text": "arjun.verma@outlook.com"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "text": "+91 9001122334"
+      },
+      {
+        "type": "ACCOUNT_NUMBER",
+        "text": "ACC-90001234"
+      },
+      {
+        "type": "AADHAAR_NUMBER",
+        "text": "9901 2345 6780"
+      },
+      {
+        "type": "COMPLAINT_ID",
+        "text": "CMP-2026-00009"
+      },
+      {
+        "type": "CREDIT_CARD",
+        "text": "4999 9999 9999 9999"
+      }
+    ]
+  },
+  {
+    "id": "complaint_0010",
+    "complaint_text": "I am writing with deep concern regarding my internet banking access. My name is Meera Joshi, and my account ACC-11122334 has been locked without any prior notice. I have submitted complaint CMP-2026-00010 and provided my Aadhaar 1122 3344 5566 for re-verification. The last known transaction was made using credit card 4100 2200 3300 4400. Kindly restore access soon and contact me at meera.joshi@gmail.com or +91 8123456789. This is causing serious inconvenience for my daily transactions.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Meera Joshi"
+      },
+      {
+        "type": "EMAIL_ADDRESS",
+        "text": "meera.joshi@gmail.com"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "text": "+91 8123456789"
+      },
+      {
+        "type": "ACCOUNT_NUMBER",
+        "text": "ACC-11122334"
+      },
+      {
+        "type": "AADHAAR_NUMBER",
+        "text": "1122 3344 5566"
+      },
+      {
+        "type": "COMPLAINT_ID",
+        "text": "CMP-2026-00010"
+      },
+      {
+        "type": "CREDIT_CARD",
+        "text": "4100 2200 3300 4400"
+      }
+    ]
+  },
+  {
+    "id": "complaint_0011",
+    "complaint_text": "Hey, Sarah Williams here. Just wanted to flag that my refund for a canceled order never came through even though it's been 3 weeks. Account is ACC-21133445, complaint ref is CMP-2026-00011. Used my card 4211 3344 5566 7788 for the original purchase. Aadhaar for KYC is 2233 4455 6677 if needed. Ping me at sarah.williams@yahoo.com or +91 9223344556 whenever, no rush but would love this sorted soon.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Sarah Williams"
+      },
+      {
+        "type": "EMAIL_ADDRESS",
+        "text": "sarah.williams@yahoo.com"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "text": "+91 9223344556"
+      },
+      {
+        "type": "ACCOUNT_NUMBER",
+        "text": "ACC-21133445"
+      },
+      {
+        "type": "AADHAAR_NUMBER",
+        "text": "2233 4455 6677"
+      },
+      {
+        "type": "COMPLAINT_ID",
+        "text": "CMP-2026-00011"
+      },
+      {
+        "type": "CREDIT_CARD",
+        "text": "4211 3344 5566 7788"
+      }
+    ]
+  },
+  {
+    "id": "complaint_0012",
+    "complaint_text": "I am extremely disappointed with the customer service I received on my last call. My name is Vikram Malhotra, and my complaint regarding debt collection harassment has been logged as CMP-2026-00012. The account under dispute is ACC-31144556, and my Aadhaar number is 3344 5566 7788 for verification. The agent even asked for my credit card 4311 4455 6677 8899 unnecessarily. Please respond via vikram.malhotra@gmail.com or +91 7334455667 and ensure my data is handled with more care.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Vikram Malhotra"
+      },
+      {
+        "type": "EMAIL_ADDRESS",
+        "text": "vikram.malhotra@gmail.com"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "text": "+91 7334455667"
+      },
+      {
+        "type": "ACCOUNT_NUMBER",
+        "text": "ACC-31144556"
+      },
+      {
+        "type": "AADHAAR_NUMBER",
+        "text": "3344 5566 7788"
+      },
+      {
+        "type": "COMPLAINT_ID",
+        "text": "CMP-2026-00012"
+      },
+      {
+        "type": "CREDIT_CARD",
+        "text": "4311 4455 6677 8899"
+      }
+    ]
+  },
+  {
+    "id": "complaint_0013",
+    "complaint_text": "Dear team, my name is Emily Clarke and I am reporting a payment failure issue. I tried to pay my credit card bill using account ACC-41155667 but the transaction failed multiple times, though the amount was deducted. This has been filed under complaint CMP-2026-00013. My Aadhaar is 4455 6677 8899, and the card in question is 4411 5566 7788 9900. Please reach me at emily.clarke@outlook.com or +91 9445566778 to resolve this urgently, as I am worried about a late fee.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Emily Clarke"
+      },
+      {
+        "type": "EMAIL_ADDRESS",
+        "text": "emily.clarke@outlook.com"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "text": "+91 9445566778"
+      },
+      {
+        "type": "ACCOUNT_NUMBER",
+        "text": "ACC-41155667"
+      },
+      {
+        "type": "AADHAAR_NUMBER",
+        "text": "4455 6677 8899"
+      },
+      {
+        "type": "COMPLAINT_ID",
+        "text": "CMP-2026-00013"
+      },
+      {
+        "type": "CREDIT_CARD",
+        "text": "4411 5566 7788 9900"
+      }
+    ]
+  },
+  {
+    "id": "complaint_0014",
+    "complaint_text": "This is Rohan Desai. I want to formally express my frustration about the KYC verification process for my account ACC-51166778. Despite submitting all documents, my account remains restricted, and complaint CMP-2026-00014 has not been resolved for two weeks. My Aadhaar number is 5566 7788 9900, and my registered card is 4511 6677 8899 0011. Please contact me directly at rohan.desai@gmail.com or +91 8556677889. I hope for a quicker resolution this time.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Rohan Desai"
+      },
+      {
+        "type": "EMAIL_ADDRESS",
+        "text": "rohan.desai@gmail.com"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "text": "+91 8556677889"
+      },
+      {
+        "type": "ACCOUNT_NUMBER",
+        "text": "ACC-51166778"
+      },
+      {
+        "type": "AADHAAR_NUMBER",
+        "text": "5566 7788 9900"
+      },
+      {
+        "type": "COMPLAINT_ID",
+        "text": "CMP-2026-00014"
+      },
+      {
+        "type": "CREDIT_CARD",
+        "text": "4511 6677 8899 0011"
+      }
+    ]
+  },
+  {
+    "id": "complaint_0015",
+    "complaint_text": "Hi, I'm James Anderson and I'm honestly heartbroken about how this situation with my savings account has been handled. Money meant for my daughter's school fees vanished from account ACC-61177889 without explanation. I filed complaint CMP-2026-00015 immediately. My Aadhaar is 6677 8899 0011, and the associated card is 4611 7788 9900 1122. Please, someone respond to james.anderson@yahoo.com or +91 9667788990 soon, this is causing me real stress.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "James Anderson"
+      },
+      {
+        "type": "EMAIL_ADDRESS",
+        "text": "james.anderson@yahoo.com"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "text": "+91 9667788990"
+      },
+      {
+        "type": "ACCOUNT_NUMBER",
+        "text": "ACC-61177889"
+      },
+      {
+        "type": "AADHAAR_NUMBER",
+        "text": "6677 8899 0011"
+      },
+      {
+        "type": "COMPLAINT_ID",
+        "text": "CMP-2026-00015"
+      },
+      {
+        "type": "CREDIT_CARD",
+        "text": "4611 7788 9900 1122"
+      }
+    ]
+  },
+  {
+    "id": "complaint_0016",
+    "complaint_text": "To the support team, I am Neha Kapoor, writing regarding recurring subscription charges I never authorized. My account is ACC-71188990, and I have logged this as complaint CMP-2026-00016. My Aadhaar number is 7788 9900 1122, and the subscription is billed to card 4711 8899 0011 2233. Kindly cancel this and issue a refund. You can reach me at neha.kapoor@gmail.com or +91 7778899001 at your convenience. Thank you for looking into this matter.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Neha Kapoor"
+      },
+      {
+        "type": "EMAIL_ADDRESS",
+        "text": "neha.kapoor@gmail.com"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "text": "+91 7778899001"
+      },
+      {
+        "type": "ACCOUNT_NUMBER",
+        "text": "ACC-71188990"
+      },
+      {
+        "type": "AADHAAR_NUMBER",
+        "text": "7788 9900 1122"
+      },
+      {
+        "type": "COMPLAINT_ID",
+        "text": "CMP-2026-00016"
+      },
+      {
+        "type": "CREDIT_CARD",
+        "text": "4711 8899 0011 2233"
+      }
+    ]
+  },
+  {
+    "id": "complaint_0017",
+    "complaint_text": "URGENT. My name is Karan Malhotra and someone used my credit card 4811 9900 1122 3344 to make a transaction I never authorized, linked to account ACC-81199001. I have filed complaint CMP-2026-00017 and need this investigated as fraud immediately. My Aadhaar is 8899 0011 2233 for verification. Call me right away at +91 9889900112 or email karan.malhotra@outlook.com. I am extremely worried about further unauthorized charges.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Karan Malhotra"
+      },
+      {
+        "type": "EMAIL_ADDRESS",
+        "text": "karan.malhotra@outlook.com"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "text": "+91 9889900112"
+      },
+      {
+        "type": "ACCOUNT_NUMBER",
+        "text": "ACC-81199001"
+      },
+      {
+        "type": "AADHAAR_NUMBER",
+        "text": "8899 0011 2233"
+      },
+      {
+        "type": "COMPLAINT_ID",
+        "text": "CMP-2026-00017"
+      },
+      {
+        "type": "CREDIT_CARD",
+        "text": "4811 9900 1122 3344"
+      }
+    ]
+  },
+  {
+    "id": "complaint_0018",
+    "complaint_text": "Good day, this is Lisa Turner. I would like to bring to your attention a discrepancy in my mortgage statement tied to account ACC-91100112. The complaint number assigned is CMP-2026-00018. For identity confirmation, my Aadhaar is 9900 1122 3344, and payments are made via card 4911 0011 2233 4455. I would appreciate a callback at +91 7990011223 or a response to lisa.turner@gmail.com whenever convenient. Thank you for your time and assistance.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Lisa Turner"
+      },
+      {
+        "type": "EMAIL_ADDRESS",
+        "text": "lisa.turner@gmail.com"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "text": "+91 7990011223"
+      },
+      {
+        "type": "ACCOUNT_NUMBER",
+        "text": "ACC-91100112"
+      },
+      {
+        "type": "AADHAAR_NUMBER",
+        "text": "9900 1122 3344"
+      },
+      {
+        "type": "COMPLAINT_ID",
+        "text": "CMP-2026-00018"
+      },
+      {
+        "type": "CREDIT_CARD",
+        "text": "4911 0011 2233 4455"
+      }
+    ]
+  },
+  {
+    "id": "complaint_0019",
+    "complaint_text": "I'm so tired of calling every single day. This is Suresh Pillai, account ACC-12211334, complaint CMP-2026-00019. My EMI got deducted twice this month, once via card 4122 1133 4455 6677. I gave my Aadhaar 1221 1334 4556 to three different agents already and nobody fixed anything. Just email me at suresh.pillai@yahoo.com or call +91 8122113344 and actually resolve it this time, please.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Suresh Pillai"
+      },
+      {
+        "type": "EMAIL_ADDRESS",
+        "text": "suresh.pillai@yahoo.com"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "text": "+91 8122113344"
+      },
+      {
+        "type": "ACCOUNT_NUMBER",
+        "text": "ACC-12211334"
+      },
+      {
+        "type": "AADHAAR_NUMBER",
+        "text": "1221 1334 4556"
+      },
+      {
+        "type": "COMPLAINT_ID",
+        "text": "CMP-2026-00019"
+      },
+      {
+        "type": "CREDIT_CARD",
+        "text": "4122 1133 4455 6677"
+      }
+    ]
+  },
+  {
+    "id": "complaint_0020",
+    "complaint_text": "Dear Support, I am Divya Menon, writing about repeated payment failures during checkout despite having sufficient balance in account ACC-22311445. This has been logged as complaint CMP-2026-00020. My Aadhaar is 2233 1145 5667, and the card used is 4223 3114 4556 6778. Could you please check the gateway logs and revert at divya.menon@gmail.com or +91 9223311445? I have missed two important bill payments because of this issue.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Divya Menon"
+      },
+      {
+        "type": "EMAIL_ADDRESS",
+        "text": "divya.menon@gmail.com"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "text": "+91 9223311445"
+      },
+      {
+        "type": "ACCOUNT_NUMBER",
+        "text": "ACC-22311445"
+      },
+      {
+        "type": "AADHAAR_NUMBER",
+        "text": "2233 1145 5667"
+      },
+      {
+        "type": "COMPLAINT_ID",
+        "text": "CMP-2026-00020"
+      },
+      {
+        "type": "CREDIT_CARD",
+        "text": "4223 3114 4556 6778"
+      }
+    ]
+  },
+  {
+    "id": "complaint_0021",
+    "complaint_text": "Hello, my name is Robert Collins and I'd like to report an issue with an unrecognized wallet top-up on account ACC-33411556. The reference for this complaint is CMP-2026-00021. My Aadhaar number, provided for KYC, is 3341 1556 6778, and the transaction card is 4334 1155 6677 8899. Please get in touch at robert.collins@outlook.com or +91 7334115566 so we can figure out where this charge originated from.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Robert Collins"
+      },
+      {
+        "type": "EMAIL_ADDRESS",
+        "text": "robert.collins@outlook.com"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "text": "+91 7334115566"
+      },
+      {
+        "type": "ACCOUNT_NUMBER",
+        "text": "ACC-33411556"
+      },
+      {
+        "type": "AADHAAR_NUMBER",
+        "text": "3341 1556 6778"
+      },
+      {
+        "type": "COMPLAINT_ID",
+        "text": "CMP-2026-00021"
+      },
+      {
+        "type": "CREDIT_CARD",
+        "text": "4334 1155 6677 8899"
+      }
+    ]
+  },
+  {
+    "id": "complaint_0022",
+    "complaint_text": "This is Pooja Iyengar, and I am absolutely livid right now. My debt collection notice references account ACC-44511667 which I do not even recognize! Complaint CMP-2026-00022 was filed yesterday. I've had to share my Aadhaar 4451 1667 7889 just to prove my identity, and apparently a card ending 4445 1166 7788 9900 was linked to this too. Call me back immediately at +91 9445116677 or email pooja.iyengar@gmail.com. This is unacceptable.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Pooja Iyengar"
+      },
+      {
+        "type": "EMAIL_ADDRESS",
+        "text": "pooja.iyengar@gmail.com"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "text": "+91 9445116677"
+      },
+      {
+        "type": "ACCOUNT_NUMBER",
+        "text": "ACC-44511667"
+      },
+      {
+        "type": "AADHAAR_NUMBER",
+        "text": "4451 1667 7889"
+      },
+      {
+        "type": "COMPLAINT_ID",
+        "text": "CMP-2026-00022"
+      },
+      {
+        "type": "CREDIT_CARD",
+        "text": "4445 1166 7788 9900"
+      }
+    ]
+  },
+  {
+    "id": "complaint_0023",
+    "complaint_text": "Hi team, Daniel Roberts here. Just a quick note that my BNPL installment was charged incorrectly against account ACC-55611778, filed under complaint CMP-2026-00023. Aadhaar for reference is 5561 1778 8990, and card used was 4556 1177 8899 0011. Whenever you get a chance, drop me a line at daniel.roberts@yahoo.com or ring +91 8556117788. No huge rush but would like it fixed before next month's cycle.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Daniel Roberts"
+      },
+      {
+        "type": "EMAIL_ADDRESS",
+        "text": "daniel.roberts@yahoo.com"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "text": "+91 8556117788"
+      },
+      {
+        "type": "ACCOUNT_NUMBER",
+        "text": "ACC-55611778"
+      },
+      {
+        "type": "AADHAAR_NUMBER",
+        "text": "5561 1778 8990"
+      },
+      {
+        "type": "COMPLAINT_ID",
+        "text": "CMP-2026-00023"
+      },
+      {
+        "type": "CREDIT_CARD",
+        "text": "4556 1177 8899 0011"
+      }
+    ]
+  },
+  {
+    "id": "complaint_0024",
+    "complaint_text": "I am writing on behalf of my elderly father regarding his savings account ACC-66711889, since he is unable to navigate the online portal. My name is Anjali Rao, and I have filed complaint CMP-2026-00024 for an incorrect deduction. His Aadhaar is 6671 1889 9001, and the linked card is 4667 1188 9900 1122. Please respond to anjali.rao@gmail.com or +91 9667118899, as he is quite anxious about his pension funds.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Anjali Rao"
+      },
+      {
+        "type": "EMAIL_ADDRESS",
+        "text": "anjali.rao@gmail.com"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "text": "+91 9667118899"
+      },
+      {
+        "type": "ACCOUNT_NUMBER",
+        "text": "ACC-66711889"
+      },
+      {
+        "type": "AADHAAR_NUMBER",
+        "text": "6671 1889 9001"
+      },
+      {
+        "type": "COMPLAINT_ID",
+        "text": "CMP-2026-00024"
+      },
+      {
+        "type": "CREDIT_CARD",
+        "text": "4667 1188 9900 1122"
+      }
+    ]
+  },
+  {
+    "id": "complaint_0025",
+    "complaint_text": "Greetings, I am William Harper and I would like to formally document a service quality complaint regarding rude behavior from a representative handling my account ACC-77811990. This is registered as complaint CMP-2026-00025. My Aadhaar is 7781 1990 0011, and the disputed transaction card is 4778 1199 0011 2233. I would appreciate a formal apology and resolution. Please contact william.harper@outlook.com or +91 7778119900 to discuss further.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "William Harper"
+      },
+      {
+        "type": "EMAIL_ADDRESS",
+        "text": "william.harper@outlook.com"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "text": "+91 7778119900"
+      },
+      {
+        "type": "ACCOUNT_NUMBER",
+        "text": "ACC-77811990"
+      },
+      {
+        "type": "AADHAAR_NUMBER",
+        "text": "7781 1990 0011"
+      },
+      {
+        "type": "COMPLAINT_ID",
+        "text": "CMP-2026-00025"
+      },
+      {
+        "type": "CREDIT_CARD",
+        "text": "4778 1199 0011 2233"
+      }
+    ]
+  },
+  {
+    "id": "complaint_0026",
+    "complaint_text": "Hey, this is Tanvi Bhatt. So annoyed right now lol. My internet banking for account ACC-88911001 just logged me out mid-transaction and now I don't know if my payment went through. Complaint number is CMP-2026-00026. My Aadhaar is 8891 1001 1223 and the card involved is 4889 1100 1122 3344. Text or email me, tanvi.bhatt@gmail.com or +91 9889110011, whichever is easier for you guys.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Tanvi Bhatt"
+      },
+      {
+        "type": "EMAIL_ADDRESS",
+        "text": "tanvi.bhatt@gmail.com"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "text": "+91 9889110011"
+      },
+      {
+        "type": "ACCOUNT_NUMBER",
+        "text": "ACC-88911001"
+      },
+      {
+        "type": "AADHAAR_NUMBER",
+        "text": "8891 1001 1223"
+      },
+      {
+        "type": "COMPLAINT_ID",
+        "text": "CMP-2026-00026"
+      },
+      {
+        "type": "CREDIT_CARD",
+        "text": "4889 1100 1122 3344"
+      }
+    ]
+  },
+  {
+    "id": "complaint_0027",
+    "complaint_text": "To the compliance department, I am Grace Bennett, and I wish to lodge a serious complaint regarding a data privacy breach involving my account ACC-99011112. My complaint reference is CMP-2026-00027. My Aadhaar number, which should never have been shared, is 9901 1112 2334, and my card 4990 1111 2233 4455 details were allegedly exposed as well. Please treat this with urgency and reply to grace.bennett@yahoo.com or +91 8990111223 immediately.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Grace Bennett"
+      },
+      {
+        "type": "EMAIL_ADDRESS",
+        "text": "grace.bennett@yahoo.com"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "text": "+91 8990111223"
+      },
+      {
+        "type": "ACCOUNT_NUMBER",
+        "text": "ACC-99011112"
+      },
+      {
+        "type": "AADHAAR_NUMBER",
+        "text": "9901 1112 2334"
+      },
+      {
+        "type": "COMPLAINT_ID",
+        "text": "CMP-2026-00027"
+      },
+      {
+        "type": "CREDIT_CARD",
+        "text": "4990 1111 2233 4455"
+      }
+    ]
+  },
+  {
+    "id": "complaint_0028",
+    "complaint_text": "Hi, my name is Aditya Choudhary and I'm reaching out about a delayed loan disbursement tied to account ACC-10122233. It has been logged as complaint CMP-2026-00028, and I've already submitted my Aadhaar 1012 2233 3445 for the process. The processing fee was charged to card 4101 2223 3445 5667 well before the loan amount was even released. Please update me via aditya.choudhary@gmail.com or +91 9101222334 as soon as possible, this delay is affecting my plans significantly.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Aditya Choudhary"
+      },
+      {
+        "type": "EMAIL_ADDRESS",
+        "text": "aditya.choudhary@gmail.com"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "text": "+91 9101222334"
+      },
+      {
+        "type": "ACCOUNT_NUMBER",
+        "text": "ACC-10122233"
+      },
+      {
+        "type": "AADHAAR_NUMBER",
+        "text": "1012 2233 3445"
+      },
+      {
+        "type": "COMPLAINT_ID",
+        "text": "CMP-2026-00028"
+      },
+      {
+        "type": "CREDIT_CARD",
+        "text": "4101 2223 3445 5667"
+      }
+    ]
+  },
+  {
+    "id": "complaint_0029",
+    "complaint_text": "Dear team, I am Olivia Bennett, and I regret to inform you of yet another unresolved issue with my checking account ACC-20233344. This complaint, CMP-2026-00029, follows an earlier one that was closed without any real resolution. My Aadhaar is 2023 3344 4556 and my associated card is 4202 3334 4556 6778. I sincerely hope this time someone reviews the case properly. Reach me at olivia.bennett@outlook.com or +91 7202333445 at any time.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Olivia Bennett"
+      },
+      {
+        "type": "EMAIL_ADDRESS",
+        "text": "olivia.bennett@outlook.com"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "text": "+91 7202333445"
+      },
+      {
+        "type": "ACCOUNT_NUMBER",
+        "text": "ACC-20233344"
+      },
+      {
+        "type": "AADHAAR_NUMBER",
+        "text": "2023 3344 4556"
+      },
+      {
+        "type": "COMPLAINT_ID",
+        "text": "CMP-2026-00029"
+      },
+      {
+        "type": "CREDIT_CARD",
+        "text": "4202 3334 4556 6778"
+      }
+    ]
+  },
+  {
+    "id": "complaint_0030",
+    "complaint_text": "This is my final attempt before escalating legally. I am Harish Nair, and my account ACC-30344455 has had unauthorized EMI deductions for three consecutive months. Complaint CMP-2026-00030 has been reopened twice with no result. My Aadhaar number is 3034 4455 5667, and the card affected is 4303 4445 5667 7889. Contact me immediately at harish.nair@gmail.com or +91 9303444556. I will not tolerate further delays on this matter.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "text": "Harish Nair"
+      },
+      {
+        "type": "EMAIL_ADDRESS",
+        "text": "harish.nair@gmail.com"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "text": "+91 9303444556"
+      },
+      {
+        "type": "ACCOUNT_NUMBER",
+        "text": "ACC-30344455"
+      },
+      {
+        "type": "AADHAAR_NUMBER",
+        "text": "3034 4455 5667"
+      },
+      {
+        "type": "COMPLAINT_ID",
+        "text": "CMP-2026-00030"
+      },
+      {
+        "type": "CREDIT_CARD",
+        "text": "4303 4445 5667 7889"
+      }
+    ]
+  }
+]

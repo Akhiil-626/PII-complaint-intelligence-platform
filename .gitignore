@@ -1,0 +1,30 @@
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.pyc
+
+# Environment variables
+.env
+
+# Model checkpoints
+results/checkpoint-*/
+models/saved/
+
+# Temporary/debug output
+*.log
+*_error.txt
+debug_*.txt
+output*.txt
+error.txt
+test_*_out.txt
+recognizer_sigs.txt
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/

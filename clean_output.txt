@@ -1,0 +1,33 @@
+﻿Loaded 83 complaint cause/effect records.
+
+Loading embedding model for phrase clustering...
+Clustering immediate cause phrases...
+Clustering root cause phrases...
+
+Immediate causes: 83 raw -> 77 clusters
+Root causes: 67 raw -> 50 clusters
+
+============================================================
+ROOT-CAUSE CAUSAL GRAPH
+============================================================
+Total nodes : 143
+Total edges : 146
+  immediate_cause: 76
+  category: 17
+  root_cause: 50
+------------------------------------------------------------
+TOP 10 ROOT CAUSES BY DOWNSTREAM IMPACT
+------------------------------------------------------------
+1. Inadequate ID verification process  (downstream weight: 5)
+2. Inadequate loan terms disclosure  (downstream weight: 4)
+3. Inaccurate debt collection data  (downstream weight: 3)
+4. Lack of clear communication  (downstream weight: 3)
+5. Insufficient security measures  (downstream weight: 2)
+6. Inadequate data protection  (downstream weight: 2)
+7. Inadequate credit report updates  (downstream weight: 2)
+8. inaccurate billing information  (downstream weight: 2)
+9. Seller did not deliver service  (downstream weight: 2)
+10. Insufficient assistance programs  (downstream weight: 2)
+============================================================
+
+Graph saved to: models\saved\causal_graph.gexf

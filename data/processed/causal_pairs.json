@@ -1,0 +1,583 @@
+[
+  {
+    "category": "Bank account or service",
+    "redacted_text": "Using [ORGANIZATION] online banking system, I transfered money to my daughter into her [ORGANIZATION] account for use [DATE_TIME]. She confirmed the money was added into her account and I noted it had been subtracted from my account. [DATE_TIME], the funds are gone from her account and are found back in my account. She calls me to help and I transfer the funds again because they were show in my account. My daughter receives the funds and uses them. [DATE_TIME], another transfer appears in her account for the same amount, but posted for [DATE_TIME] prior ( although the money was not there [DATE_TIME] ). My account is overdrawn with {$70.00}. Worth of overdraft fees. I spend XXXX hours contacting [ORGANIZATION] explaining that the funds were n't actually in my daughters account and it seems odd that they show up [DATE_TIME] and are posted for [DATE_TIME]. XXXX employees of [ORGANIZATION] are unable to explain this to me and tell me it 's my mistake and they will not give me any relief on the overdraft fees.",
+    "immediate_cause": "Second unwanted transfer appears",
+    "root_cause": "Inadequate transaction processing controls",
+    "parse_error": false
+  },
+  {
+    "category": "Bank account or service",
+    "redacted_text": "I recently had both my accounts put on resticted use because of a bad check, I spoke to someone in the bank and they said there is nothing they can do and my accounts are going to close in [DATE_TIME] and I have a pending direct [ORGANIZATION] they do n't allow and they keep giving me runaround stories saying it will be available and another representative said I ca n't get access because the account is resticted I do not understand why I can not get it",
+    "immediate_cause": "Bad check on account",
+    "root_cause": "Inadequate account monitoring",
+    "parse_error": false
+  },
+  {
+    "category": "Bank account or service",
+    "redacted_text": "I have been a customer at [ORGANIZATION] for many years, since I was in high school, through college, now, and as I prepare to become a student again. I am constantly in a branch working with staff whose most common response is that they are unable to assist me due to restrictions placed upon them, or it has to be submitted for review. I 'm in the branch trying to find effective ways to use my account without constantly paying fees. Yet I encounter fees for going to the branch too much, for over drafting, for transferring funds if my account does overdraft. I 've overdrafted for less than XXXX dollars and am yet unable to bring my account current because the bank says they are unable to return {$70.00} in fees. In [DATE_TIME] i have been charged more than {$600.00} in fees, almost equivalent to [PERSON] paycheck, this has a significant impact on my financial well being.",
+    "immediate_cause": "Overdrafted account, $600 in fees",
+    "root_cause": "Insufficient account management support",
+    "parse_error": false
+  },
+  {
+    "category": "Bank account or service",
+    "redacted_text": "I opened a cheque account at [ORGANIZATION] while visiting [PERSON] in [DATE_TIME].\n[ORGANIZATION] will not send me the balance. I have made [ORGANIZATION] calls and numerous emails with endless promises made but still no money.",
+    "immediate_cause": "Endless promises made over phone/email",
+    "root_cause": null,
+    "parse_error": false
+  },
+  {
+    "category": "Bank account or service",
+    "redacted_text": "I opened a CapitalOne360 account [DATE_TIME] and set up an [ORGANIZATION] draft [ORGANIZATION]. I specifically asked when the [ORGANIZATION] would occur and theyexplained that they would first send two small deposits to the credit unionand then I would have to \" confirm '' those deposits before the initialtransfer to my new account would occur. This was confirmed by anumber of web pages on their [URL] web site. \n[DATE_TIME], [DATE_TIME] after opening the [ORGANIZATION] account andwith no small deposits to confirm, they drafted my checking account for {$50000.00} which caused me to incur a transfer fee of {$3.00} at the credit union andexposed me to additional fees had I not caught this situation at once. \nI am concerned that their web site and call center staff are eitherintentionally or inadvertently providing incorrect information at thepotential expense and inconvenience of consumers and I would like my {$3.00} back. This is not about the {$3.00} but the principle of what they aretelling their new accountholders both personally and on their web pagesand their response to my concerns which involve hiding behind '' procedures '' rather than just acknowledging the issue and refundingmy fee. I escalated the matter to a manager who also stonewalled untilthey could conduct \" research '' into the matter.",
+    "immediate_cause": "Draft of $50,000 from checking account",
+    "root_cause": "Inadequate communication of account verification process",
+    "parse_error": false
+  },
+  {
+    "category": "Checking or savings account",
+    "redacted_text": "On [LOCATION]/XX/2019, I had 8 pending charges ranging from {$0.00} being the smallest to {$140.00} being the largest. The attached statement from my online banking account will reflect that the balance of my account beginning [LOCATION]/XX/2019 was {$110.00} after the first entry for that date was credited as a deposit of {$55.00}. The overnight reorganization and posting of debits/credits occurring on [LOCATION]/XX/2019, reflect that the {$110.00} covered 7 of those pending charges with an ending balance of {$48.00}. The last of those pending charges remained pending on [LOCATION]/XX/2019. On [LOCATION]/XX/2019, [ORGANIZATION] assessed 6 overdraft fees associated with the 7 charges that posted that day at {$36.00} each, resulting in fees in the amount of {$210.00}. On [LOCATION]/XX/2019, Regions sent a notice with some kind of reorganizing debit math formula to validate their {$210.00} worth of fees that they claim are overdraft fees for their payment of the 7 charges on my behalf. However, the online banking statement clearly shows that those 7 debits were paid with my own money, leaving a balance in my account of {$48.00}. As of [LOCATION]/XX/2019, there was still a pending charge for {$140.00}, which had not yet posted, but for which 1 overdraft fee should be rightfully incurred once the pending charge is actually posted to the account. It seems unethical to me that a bank can assess overdraft charges based on a pending payment that has not yet posted and claim that the pending payment caused charges that previously posted to overdraft the account when there was a {$48.00} balance in the account after those charges had posted. I thought this may perhaps be an error, so I went to a local branch of the bank where a teller attempted to explain that the pending charge of {$140.00} was posted to the account before the other 7 charges, which caused the 7 overdrafts, but as a courtesy they only assessed 6 overdraft fees. A courtesy? Every single one of those 7 charges were paid with my own money with a positive balance left over, for which they charged me {$210.00} in overdraft fees, but it was a courtesy to me that they only charged for 6 and not 7? As my online statement clearly reflects, the other 7 charges were posted to the account before the {$140.00}, as the charge for {$140.00} remains pending as I write this complaint. The teller was not able to provide any printout or evidence other than her word that the {$140.00} charge posted before the other 7 charges that were posted on [LOCATION]/XX/2019, nor was she willing to refund any of the fees. The only evidence that exists of the posting order of the charges on [LOCATION]/XX/2019 is the online statement I have attached hereto, which shows 7 debits posted with a balance of {$48.00} and a pending debit of {$140.00}.",
+    "immediate_cause": "Regions assessed overdraft fees on pending payment",
+    "root_cause": null,
+    "parse_error": false
+  },
+  {
+    "category": "Checking or savings account",
+    "redacted_text": "[ORGANIZATION] lost my locked box contents. All my fees had been paid.",
+    "immediate_cause": "Lost locked box contents",
+    "root_cause": null,
+    "parse_error": false
+  },
+  {
+    "category": "Checking or savings account",
+    "redacted_text": "To Whom it May Concern, On XX/XX/2020 my [ORGANIZATION] checking account was comprised and there were combined fraudulent purchases in the amount of {$260.00}. In addition, these fraudulent charges caused my account to be charged 3 overdraft fees in the combined amount of {$100.00}. Upon realizing the charges and penalties on [LOCATION]/XX/2020, I immediately contacted [ORGANIZATION] for assistance ( all charges were still pending ). [ORGANIZATION] insisted I couldn't take any action until the charges were fully processed. Therefore, I had to wait until [LOCATION]/XX/2020 and [LOCATION]/XX/2020 to summit formal claims. [ORGANIZATION] did an \" investigation '' and concluded only 2 of the 3 charges were fraud and only reimbursed me {$100.00} for 2 false purchases and {$35.00} for 1 overdraft fee. This conclusion is nonsensical because all of the charges took place at the same time so to conclude that only part of it is fraud doesn't hold up to critical thinking. After multiple phone calls and holding for a combined wait-time of [DATE_TIME] their customer service has informed me there is nothing more they can do aside from reopen the dispute. I reopened the dispute on [LOCATION]/XX/2020 and did not hear a single thing so reopened it again on [LOCATION]/XX/2020. \nI'm hoping someone can help correct this situation so future customers are not robbed by [ORGANIZATION]. I am still due {$160.00} from a fraudulent purchase and {$70.00} from two overdraft fees. There is a global pandemic and financial crisis occurring due to COVID 19 and I am struggling to get by. This bank, which charges me a [DATE_TIME] maintenance fee, was not able to provide sufficient help when my account was compromised during this trying time. This is how [ORGANIZATION] treats a customer of [DATE_TIME] that was hacked during economically challenging times.",
+    "immediate_cause": "Account compromised, fraudulent purchases made",
+    "root_cause": "Insufficient security measures in place",
+    "parse_error": false
+  },
+  {
+    "category": "Checking or savings account",
+    "redacted_text": "I opened a Savings account in [LOCATION]/XX/XXXX in preparation for a large purchase. After making the purchase I was planning on keeping the account. The account I was signed up for had a requirement for a minimum balance of {$3500.00}. I was not made aware of this until after the purchase in [LOCATION]/XX/XXXX when I had found that my account was hit with [DATE_TIME] worth of maintenance fees. After calling I learned I was signed up for a savings that needed that high of a limit on. I had {$500.00} in the account and was planning on rebuilding it after the purchase. When calling to reconcile I was transferred to the bank 's sales department first and told nothing could be done about the fee. After pushing back I was told I could only be credited back 25 % of the fee.",
+    "immediate_cause": "Minimum balance requirement not disclosed",
+    "root_cause": null,
+    "parse_error": false
+  },
+  {
+    "category": "Checking or savings account",
+    "redacted_text": "[ORGANIZATION] refused to do business with me as a result of my misconduct that was not related to [ORGANIZATION] banking in any way. There advertising now says that they are open \" TO ALL MILITARY MEMBERS WHO HAVE BEEN DISCHARGED WITH AN HONORABLE DISCHARGE '' I meet that criteria for membership however I am still blocked from [ORGANIZATION] products. \n\n[ORGANIZATION] must allow me to resume my membership as I fit their stated membership requirements and allow me to use all products that are provided to others. To not would be false advertising.",
+    "immediate_cause": "Honorably discharged from military service",
+    "root_cause": null,
+    "parse_error": false
+  },
+  {
+    "category": "Consumer Loan",
+    "redacted_text": "This is about [ORGANIZATION] auto finance company ... .they got my cell number from who knows where ... ..I have NEVER had a loan or ANYTHING with them, but they keep callllllllling me at least three four times a day sometimes more ..., ... they call when im on conference call and when they do, my conference cll drops ... and I have to redial in ... ..Ive sent them email telling them to \" cease and desist '' ... [URL]d they talk to me like im the one infringing on their time ... [URL]ey do n't leave messages, just call and call and call ... .its annoying ... .Ill NEVER buy a car from these people based on their behavior ... ..Ive never had dealings with them, a loan, nothing!! I HAVE TO PICK AN OPTION BELOW TO GET THIS THROUGH, BUT IVE NEVER HAD A LOAN OR NOTHING WITH THESE FOLKS ... ..I want them to stop calling me and or anyone else they are harassing! when u ask them to stop they do n't. then u call them they act like YOURE stupid.",
+    "immediate_cause": "Got my cell number from unknown source",
+    "root_cause": "Inadequate data protection",
+    "parse_error": false
+  },
+  {
+    "category": "Consumer Loan",
+    "redacted_text": "We purchase furniture through [ORGANIZATION], I was recently reviewing our credit report and found that we have a judgment in [LOCATION] against us that was filed in [DATE_TIME]. I do n't understand how a judgement in [LOCATION] can be filed against us when we dealt with and made the initial purchase in [LOCATION]. [ORGANIZATION] also has debited our bank accounts for unauthorized payments, charged unreasonable fees to make automatic purchases, made collection calls 5-7 times per day. I asked for a written invoice several times and I have never received one.",
+    "immediate_cause": "Debiting unauthorized payments",
+    "root_cause": "Inadequate purchase tracking",
+    "parse_error": false
+  },
+  {
+    "category": "Consumer Loan",
+    "redacted_text": "Loan payment processing time within the [ORGANIZATION] banking system. Payments automatically debited/transferred from [ORGANIZATION] accounts take [DATE_TIME] to process, accruing interest on full loan amounts [DATE_TIME].",
+    "immediate_cause": "Slow payment processing time",
+    "root_cause": null,
+    "parse_error": false
+  },
+  {
+    "category": "Consumer Loan",
+    "redacted_text": "I went directly thru [ORGANIZATION] to get pre approved for my car loan. Once I found the car I wanted to purchase I went to the dealership and took with me the approval letter. I called [ORGANIZATION] to get the status of the Loan a week after having my new car. i was told that because I had gone to a preferred dealership I needed to follow up with them. I was really upset and explained to them that the main reason I got approved directly thru [ORGANIZATION] was to avoid dealing with the dealership. I immediately asked for my issue to be escalated. The representative said she would escalate the issue but I never received a call from the escalation department. [DATE_TIME] passed and the dealer contacted me stating that my rate had increased due to having been {$1400.00} over my approval amount. I called the lender again and was told that all was resolved and we reached a new agreement. A new approval amount was uploaded to the system and when the fewer called to confirm new terms [ORGANIZATION] said that the loan was back in [LOCATION]. How can an approval be given in [ORGANIZATION] before an [ORGANIZATION] looks at it. Again I called lender and they said that I needed to go back to my dealer for answers. Why do I have to go back to the dealer when they did n't tAke care of my financing? I submitted my loan directly thru bank of [LOCATION] website!!! To make matters worse I was. Ever assigned a loan officer and ifs a loan officer is assigned it 's out of formality because no one has ever reached out by either mail or phone to introduce themselves, which makes this process even more confusing. So to sum it all up I was not assigned a point of contact, I am being mislead as to what the reasons of various [ORGANIZATION] are and although I have asked for my loan to be escalated no one has reached out. My application is about to expire on [PERSON] and I refuse to have my credit pulled again when it 's not my fault.",
+    "immediate_cause": "Dealer contacted for rate increase",
+    "root_cause": "Poor communication between lender and dealer",
+    "parse_error": false
+  },
+  {
+    "category": "Consumer Loan",
+    "redacted_text": "Line of credit loan. Will not or can not send invoice. When I contact bank they all tell me different reasons. If I do not remember and do not send loan payment in time they will charge me. Some months I get invoice some I do not. Blame it on recent merger with [ORGANIZATION]. Happened before the merger also. Tired of calling. They need to be responsible enough to send invoice and not make me call each month. They also tell me different places to send it. Also not very pleasant when I call either. Please do something. Tired of banks doing what ever they want.",
+    "immediate_cause": "Different reasons from bank staff",
+    "root_cause": "Lack of communication and process standardization",
+    "parse_error": false
+  },
+  {
+    "category": "Credit card",
+    "redacted_text": "My [ORGANIZATION] credit card failed to send me any sort of invoice or bill for purchases I made on the card. Then then charged me [PERSON] late fees and ultimately reported the account as delinquent to the [ORGANIZATION] credit company which brought down my credit score and caused me to be denied a loan. When I contacted them they said I was set up for \" electronic billing '' but they did not have my email address. I never signed up for electronic billing, so I do n't know why they would say that. Also, they have my home address, so if they did n't have my email, they could have sent a bill there. I had to pay over {$100.00} in late fees and it ruined my credit score, cost me a car loan, and took [DATE_TIME] out of my life trying to get it resolved. I have never not paid a bill in my life. If they had sent me a bill, I would have paid it, but I had no idea there was an outstanding balance because they did not notify me. I spoke with multiple representatives, waited [DATE_TIME] on hold, and no one has been able to help me. I was told someone was going to contact me to resolve this, but it has been [DATE_TIME] and I have heard nothing.",
+    "immediate_cause": "Failed to send invoice or bill",
+    "root_cause": "Insufficient customer contact information",
+    "parse_error": false
+  },
+  {
+    "category": "Credit card",
+    "redacted_text": "Hello, I signed up with [ORGANIZATION] Executive Card because I was told it includes access to many [ORGANIZATION]. However, after traveling to a few places in [LOCATION], I found out that the card is not accepted in those Airports. When I returned home, I called [ORGANIZATION] to cancel my card. I was told I will get {$450.00} [DATE_TIME] fee credit back to my card since I was still within [DATE_TIME] allowed to cancel the card. Its been [DATE_TIME] and I have yet to get the credit back. Every time I call, they tell me to wait a little longer. And now, no one asnwers from customer service. I am furious and this is unacceptable. I need my money returned to me.",
+    "immediate_cause": "Card not accepted at airports",
+    "root_cause": "Insufficient airport merchant acceptance testing",
+    "parse_error": false
+  },
+  {
+    "category": "Credit card",
+    "redacted_text": "I was sent a credit card in the mail by [ORGANIZATION] in [LOCATION] in [LOCATION]/XX/2017. I have no account with this bank, have never applied or asked for this card. This account was opened without my agreement, knowledge or permission. This account has been established fraudulently and I am concerned about how this affects me. I want this account closed immediately.",
+    "immediate_cause": "Credit card received in the mail",
+    "root_cause": "Data breach or identity theft",
+    "parse_error": false
+  },
+  {
+    "category": "Credit card",
+    "redacted_text": "[ORGANIZATION] contacted me as a result of a complaint I filed [DATE_TIME]. My complaint dealt with how they allocated all of the additional payment on my [ORGANIZATION] account to the interest-bearing purchase and none to the soon-to-expire promotional purchases. I had to call [PERSON] to get the allocation changed which took about XXXX minutes each time. When the representative called me, she explained that the legislation passed in [PERSON] required them to allocate any overpayment to the balance with the highest interest. Since the promotional payments had no interest if paid off in time, they had to credit the interest bearing purchase. I believe this is a technicality or interpretation that [ORGANIZATION] has made that enables them to profit from the accrued interest on interest-free promotional purchases and was definitely not the intent of [PERSON] when the consumer protection legislation was passed.",
+    "immediate_cause": "Legislation requiring allocation to high-interest balance",
+    "root_cause": "Misinterpretation of consumer protection legislation",
+    "parse_error": false
+  },
+  {
+    "category": "Credit card",
+    "redacted_text": "I applied at a bank on [LOCATION]/XX/2016 for a credit card and received an immediate reply dated [LOCATION]/XX/2016 that denied me the card. The letter from the bank stated, \" Our decision was based on the following specific reasons : Not enough accounts opened long enough to establish a credit history. '' As a matter of fact, my credit history includes ; a mortgage for a home which I repaid without any late payment penalties, a checking/debit account held for [DATE_TIME] with [LOCATION] bank and with no overdraft penalties, [DATE_TIME] of paying rent at the same location without a late payment, and at present I am debt free. \nNone of this history was requested by the bank when the application was made. Instead, there was a supposed reliance upon a third party to provide the information, so that the very attractive credit card product, that was advertised with many perks, would go to someone with a good credit history. If I do n't have a good credit history then who does? And now it is on my shoulders to prove the third party is wrong. \nIt appears to me, that this is a way that the bank can deny accountability for their decisions, and thereby skirt the laws regarding [ORGANIZATION] by using unwarranted barriers and by not making sincere efforts to actually be specific in their response to my application for a credit card. Your kind attention to this would be appreciated. \nAlso, let it be known, that I have now received in the mail, and for the first time, solicitations by another credit card company offering a similar but lesser credit card product. It is questioned, is this a financial form of bait and switch?",
+    "immediate_cause": "Third party failed to provide info",
+    "root_cause": "Inadequate credit evaluation process",
+    "parse_error": false
+  },
+  {
+    "category": "Credit card or prepaid card",
+    "redacted_text": "The Capital one representative opened the dispute for the transaction I had never requested causing my air plan ticket cancellation, i had to pay triple price for the new ticket. I asked supervisor from [ORGANIZATION] to investigate the case and find out whos mistake was it. [PERSON] # XXXX informed me that someone from record reviewing department confirmed that I personally requested. I told here that it is absolutely impossible and some one falsify the conversation transcript. I ask her to provide transcript to me for my investigation she refuse to do so. \nUnprofessional job of the dispute department personal caused my air plane ticket [DATE_TIME] cancellation, even more disturbing the fact that investigation was not completed properly and report on investigation was falsified.",
+    "immediate_cause": "Dispute opened for unauthorized transaction",
+    "root_cause": "Inaccurate or falsified customer information",
+    "parse_error": false
+  },
+  {
+    "category": "Credit card or prepaid card",
+    "redacted_text": "I applied for a [ORGANIZATION] Executive Card and though I have over a [ORGANIZATION] credit score and met all of their qualifications, [ORGANIZATION] did not give me a reason for declining my application.\nI believe since the representative knew I was a gay man he changed his demeanor on the phone dramatically. I was initially told it would not be a problem and then when he asked me if my spouse would be a co-signer I stated that I am not married but engaged to another man. Also, I told him I was an [NRP] citizen and I guess due to my [PERSON] accent he did not believe me. Two strikes apparently.\nHe sounded alarmed and then cut the conversation short. I am very concerned about their conduct and am extremely hurt by being turned down for the card. I have impeccable credit and have thousands of disposable income. I make over $ 85K a year and no debt.\nI have made a copy of [ORGANIZATION] score for your review. Please help me.\nThanks, [PERSON]",
+    "immediate_cause": "Representative changed demeanor on phone",
+    "root_cause": "Discrimination based on sexual orientation",
+    "parse_error": false
+  },
+  {
+    "category": "Credit card or prepaid card",
+    "redacted_text": "I made a purchase for {$440.00}, I never received the order and merchant refunded me it. I received the refund of {$440.00}, then same day the refund hit my bank, the merchant rebilled me for {$440.00} and refuses to refund it without giving me a reason to why they recharged me. I now have 2 transactions for {$440.00}, the first one was refunded so I call Capital One to dispute THE SECOND charge of {$440.00}. First issue is, the employee who opened the dispute for me mistakenly credits me for only {$44.00} ( I have proof via letter stating \" I am receiving a credit of {$44.00} for the charges being disputed of {$440.00} '' ). I have called multiple times to get the missing {$390.00} temporary credit that I was owed, and they finally issue it after a dozen phone calls over [DATE_TIME]. [DATE_TIME] after the {$390.00} temporary credit was posted to my account, I got a transaction rebill for {$44.00} ( now my full {$440.00} temporary credit just went down to {$390.00} ) .... and agents couldn't tell me why I was being rebilled for the {$44.00}, and after speaking to two supervisors at the dispute team, they both suggested to just wait for the dispute outcome. Fast forward [DATE_TIME], I got rebilled for the remainder of {$390.00} AND {$440.00}.\n\nTheir outcome was the merchant already refunded me, but KEEP IN MIND, merchant only refunded me for the first transaction, not the second. However, [ORGANIZATION] is stating merchant issued a refund for the 2nd transaction I am disputing, when in fact they only issued a refund for the first transaction of {$440.00}. Now I have a purchase adjustment/transaction rebill for {$44.00}, {$390.00}, and {$440.00} totaling to {$880.00}. My {$440.00} dispute just turned into a {$880.00} XXXX storm, and I can't get a hold of the Capital One dispute because [DATE_TIME] are not 24/7 and [DATE_TIME] I have called, I have been on hold for [DATE_TIME] and can not stay on the phone for [DATE_TIME] just to get an agent from disputes then explain the entire situation over. \n\nThe snippet of my transactions attached shows [PERSON] only refunding me for the FIRST TRANSACTION not both the first and second transaction the agents are telling me over the phone. There is only ONE merchant credit in my account for {$440.00}.",
+    "immediate_cause": "Merchant rebilled disputed charge",
+    "root_cause": "Inadequate dispute resolution process",
+    "parse_error": false
+  },
+  {
+    "category": "Credit card or prepaid card",
+    "redacted_text": "On [LOCATION]/XX/2017 Discover had to have some mix up with their billing dept because they reported a late payment on my account of {$5.00} ... I informed them that statements were n't coming in the mail nor was a courtesy call placed that the {$5.00} would be reported late if payment was n't made.",
+    "immediate_cause": "Late payment reported by Discover",
+    "root_cause": "Inadequate statement mailing process",
+    "parse_error": false
+  },
+  {
+    "category": "Credit card or prepaid card",
+    "redacted_text": "I have a [ORGANIZATION] account with [ORGANIZATION] and have been using it for some time now. Without my knowledge, Synchrony opened a separate account that was a Care Credit Rewards Mastercard in my name. This account existed alongside and separate from my primary [ORGANIZATION] account. I only discovered it by logging into the mySynchrony portal and seeing two accounts listed where I expected to see one.\n\nI contacted Synchrony bank and they said that I was sent a letter that required me to opt out to not have the [ORGANIZATION] account opened. I never received this letter. They also said this was an \" upgrade '' to my existing account, which does not seem to be accurate since my balance on my [ORGANIZATION] account did not show up under the [ORGANIZATION] account. I instructed Synchrony bank to close the [ORGANIZATION] account and leave my [ORGANIZATION] account open, and they agreed to comply with my request. However I do not know the damage this may have done to my credit from having an additional line of credit opened in my name. \n\nThis is a deceptive practice that is borderline identity theft. It is unlawful for any entity to open a line of credit in my name without my authorization. If this is an \" upgrade '' of the card, then at the very least I should have been contacted directly for authorization prior to the changes in terms of service and not \" opted in '' automatically without my approval. Altering my account without due notice and agreement is also unethical and potentially unlawful.",
+    "immediate_cause": "Synchrony opened separate account without notice",
+    "root_cause": "Lack of customer consent and communication",
+    "parse_error": false
+  },
+  {
+    "category": "Credit reporting",
+    "redacted_text": "Me and another persons information was merged on our reports. I have since fixed my reports on my end, but I dont think the other person fixed thiers. So i am still having her open accounts under my name, and have my information populate under her name. ( Also, security questions i have to answer are almost ALWAYS questions about her information. ) I want to make sure that my information is no longer on this persons credit report, however i have no way to formally dispute the issue since it is not my report.",
+    "immediate_cause": "Information merged on reports",
+    "root_cause": "Data entry error or poor quality control",
+    "parse_error": false
+  },
+  {
+    "category": "Credit reporting",
+    "redacted_text": "I have advised this company before that my identity had been compromised and they still fail to keep me safe. Everything on my report looks correct as far as i [PERSON] tell with the exception of a couple accounts that are not mine, however the purpose of this complaint is because i have not been seeking any credit yet i see inquiries on my report.",
+    "immediate_cause": "Unauthorized credit inquiries",
+    "root_cause": "Lack of identity verification measures",
+    "parse_error": false
+  },
+  {
+    "category": "Credit reporting",
+    "redacted_text": "Requested my \" Expunged '' State Tax [PERSON] be removed from my [ORGANIZATION], started an investigation, [ORGANIZATION] completed the investigation yet this item still remains on my Equifax Credit Report.",
+    "immediate_cause": "Investigation completed",
+    "root_cause": "Inadequate credit report updates",
+    "parse_error": false
+  },
+  {
+    "category": "Credit reporting",
+    "redacted_text": "[ORGANIZATION] has reports my address, phone numbers, and name incorrectly as well as my student loans status, medical bills reporting incorrectly. This has significantly affected my approval for credit.",
+    "immediate_cause": "Incorrect data in my file",
+    "root_cause": null,
+    "parse_error": false
+  },
+  {
+    "category": "Credit reporting",
+    "redacted_text": "The credit bureau did not perform a proper investigation of the public record that is on my file. I contacted the courthouse, and they advised me that they do not verify directly with the credit bureaus and that they do not have a file on me at my name and address and entire [ORGANIZATION] number. So, I need to know how did they verify the inaccurate bankruptcy that is on my file? If it is through a third party, then that is in violation of the [ORGANIZATION]. I need for them to verify this with the courthouse. \nFurthermore, I asked them to perform another reinvestigation of the items on my credit report in accordance to the [ORGANIZATION], Section 611, part B, subsection ( iii ). Please see the attached letter. They never sent me information that was required. This letter was sent to them certified.",
+    "immediate_cause": "Credit bureau failed to investigate",
+    "root_cause": "Lack of adequate verification process",
+    "parse_error": false
+  },
+  {
+    "category": "Credit reporting, credit repair services, or other personal consumer reports",
+    "redacted_text": "I received a copy of my credit report and there are accounts on it that I do not recognize.I have tried to contact the credit bureau to remove the accounts however they have denied my request to have these accounts investigated and removed.",
+    "immediate_cause": "Unrecognized accounts on credit report",
+    "root_cause": "Inadequate account verification process",
+    "parse_error": false
+  },
+  {
+    "category": "Credit reporting, credit repair services, or other personal consumer reports",
+    "redacted_text": "I get a [DATE_TIME] statement from [ORGANIZATION] [DATE_TIME] stating that my minimum [DATE_TIME] payment is {$650.00} a month. I am attaching a copy of the statement which is similar to the one we get [DATE_TIME]. I pay the {$650.00} religiously ( before the due-date ) [DATE_TIME], but despite that, [ORGANIZATION] reports that my account is past due. I am also attaching a statement illustrating that I have made timely payments [DATE_TIME], going back to [LOCATION]/XX/XXXX until [DATE_TIME] ( XX/XX/XXXX ). Over the course of that time, [ORGANIZATION] has erroneously reported me delinquent when they should have reported me in good standing.",
+    "immediate_cause": "Erroneous minimum payment reporting",
+    "root_cause": "Inaccurate payment processing system",
+    "parse_error": false
+  },
+  {
+    "category": "Credit reporting, credit repair services, or other personal consumer reports",
+    "redacted_text": "In [LOCATION] of [DATE_TIME], I checked my credit report via the online [ORGANIZATION] credit reporting site. At that time, I was aware that I would be charged XXXX dollar for a on-line copy of my credit report. While checking my credit card statement, I found that I had a recurring charge of {$21.00} charged to my account on [LOCATION]/XX/2018. I have attempted to contact [ORGANIZATION] at the number provided ( XXXX ) multiple times, but after following voice prompts am left on hold without anyone ever picking up or answering. \n\nI never agreed to this service, nor did I request it. I am unable to contact anyone so I that can cancel the credit monitoring service. Experians business practices and default auto enrollment in their credit monitoring service is deceptive and unethical. I would like the charge for the credit monitoring refunded and the service terminated.",
+    "immediate_cause": "Recurring charge of $21.00 appeared",
+    "root_cause": "Default auto enrollment",
+    "parse_error": false
+  },
+  {
+    "category": "Credit reporting, credit repair services, or other personal consumer reports",
+    "redacted_text": "accounts showing missed payment when i did not XXXX  XXXX XXXX",
+    "immediate_cause": "accounts showing missed payment",
+    "root_cause": "inaccurate billing information",
+    "parse_error": false
+  },
+  {
+    "category": "Credit reporting, credit repair services, or other personal consumer reports",
+    "redacted_text": "This letter is a formal complaint the 3 reporting agencies are reporting inaccurate and incomplete credit information and/or that they are profiling, discriminating and/or making erroneous predictions that are affecting my % rates as well as economic well being and/or are affecting the overall economy as well.\n\nAnd about their refusal to cease and desist and/or to update and/or correct my information based on facts and not based on what someone else may of done and/or some computer based profiling process and have actual human beings get factual correct informations and/or generate reports not by assuming.\n\nThere are other matters as well please see the letters sent to them and their responses for further informations and/or to grasp the gist of my [COMPLAINT_ID].\n\nI am filing a compliant and a dispute to the 3 reporting agencies summary of my credit worthiness as well as their credit scores and/or [ORGANIZATION] scores being placed on me.\n\nI am also filing a complaint about the response or the reporting agencies as well as their lack of proper record keeping and/or their unawareness of dated reports they generated or summaries they made about me. I am requesting copies of what they are reporting on me and to whom and on what dates. What was the nature of the report including the [ORGANIZATION] score and/or processes used to determine it the specifics and/or methods used. Their record keeping procssses in relation to my social security # and or reports they generated specifically for the date ofXX/XX/2019 as referenced in my letter sent to them ( see attached copies ) The credit scores were generated from the national credit reporting companies which they determined through a computer based simulation which evaluate millions of people and/or their histories consistently on many different characteristics it compared this information to the loan repayment history of consumers with similar profiles and It was wrongfully applied to my report. Basically I was profiled and discriminated against by the above described process For example, a credit scoring system awards points for each factor that helps predict who is most likely to repay a debt. A total number of points a credit score helps predict how creditworthy you are : how likely it is that you will repay a loan and make the payments when theyre due. A higher credit score is taken to mean you are less of a risk, which, in turn, means you are more likely to get credit and/or pay less for it.\n\nAnd there is no one held accountable for it as well as is there any way to dispute ones [ORGANIZATION] score.\n\nI will not tolerate anyone playing coy with me and/or acting like they dont know what reports they made on me especially when the date and a copy was provided as well as I specifically addressed the topics and/or was clear in my complaint/ dispute.\n\nI am distressed that they have included the inaccurate false narratives and/or provided such informations below in my credit profile and that they have failed to maintain reasonable procedures in their operations to assure maximum possible accuracy in the credit reports they publish.\n\nCredit reporting laws ensure that bureaus report only 100 % accurate credit information. Every step must be taken to assure the information reported is completely accurate and correct. They also protect people from discriminations and/or profiling. Consumers are entitled to equal and fair access to credit as well as rates.\n\n( [ORGANIZATION] ) prohibits credit-related discrimination. [ORGANIZATION] ( [ORGANIZATION] ) was enacted in [DATE_TIME] to prevent Discrimination.\n\nA consumer credit system allows consumers to borrow money or incur debt, and to defer repayment of that money over time. Having credit enables consumers to buy goods or assets without having to pay for them in cash at the time of purchase. Having a good credit record means that a person has an established history of paying back 100 % of his/her debts on time. It shouldnt be based on someone elses history and/or some computer based profiling systems.\n\nAnd they should be corrected and fixed when the profiling based systems used were in fact wrong.\n\nThank you for your time and support as well as in advanced for looking into this matter as well as addressing it at any levels you find necessary including the legislative branches.\n\nI also request that you explain to the 3 reporting agencies what my compliant is about and why since they appear to be confused as to what it is in references to.\n\n( Please Note I also served in the XXXX XXXX and was not able to ck both ) Professionally, [PERSON]",
+    "immediate_cause": "Inaccurate credit information on report",
+    "root_cause": "Bias in credit scoring system",
+    "parse_error": false
+  },
+  {
+    "category": "Debt collection",
+    "redacted_text": "I was contacted by [ORGANIZATION] saying I owed an apartment complex over {$5000.00}. When I asked for more information and that I wanted to dispute it, I was told that [ORGANIZATION] did not have to send me any documentation and that I was being sarcastic and cynical. They also said I had no basis or evidence to dispute the debt. They made false claims stating I had been evicted and owed. I again asked for a break down of the debt in writing, I was told they sent it out but I have yet to receive anything. When I called a third time to ask for documentation, I was told that if I kept calling I would be sued for harassment. The [PERSON] women I spoke with were [PERSON] and [PERSON]. Extremely unprofessional and rude.",
+    "immediate_cause": "False debt collection claims",
+    "root_cause": "Lack of proper debt collection procedures",
+    "parse_error": false
+  },
+  {
+    "category": "Debt collection",
+    "redacted_text": "This was a payday loan from [ORGANIZATION] and the callI I got [DATE_TIME] was threatening to have me arrested if I fail to pay {$460.00} by a certain time.",
+    "immediate_cause": "Threatening call from debt collector",
+    "root_cause": "Inadequate debt collection practices",
+    "parse_error": false
+  },
+  {
+    "category": "Debt collection",
+    "redacted_text": "The company portfolio recovery keeps harassing me through phone calls claiming I owe a debt which is over [DATE_TIME]. I do n't owe anything to this company and have no idea who the original debt came from, this company keeps threatening me and family memebers at my realtives door step, I had to change my phone number twice, they keep harassing me telling me through voicemail and mail that I will be sued and taken to jail for not paying a debt which I do not own.",
+    "immediate_cause": "Phone calls with debt claim",
+    "root_cause": "Inaccurate debt collection data",
+    "parse_error": false
+  },
+  {
+    "category": "Debt collection",
+    "redacted_text": "I started disputing my credit because I found out i had identity theft/fraud. Muktiple companies have harassed me, impersonated them self as a lawyer, tried bribery, and also has given my information to a friend.",
+    "immediate_cause": "Identity theft/fraud discovery",
+    "root_cause": null,
+    "parse_error": false
+  },
+  {
+    "category": "Debt collection",
+    "redacted_text": "A company called [ORGANIZATION] contacted me regarding a supposedly returned check from [LOCATION]/XX/1995 in the amount of {$10.00}. To my knowledge I was never contacted by the bank to collect any insufficient funds. The bank is no longer in business. I 've advised [ORGANIZATION] this is a time-barred debt from [DATE_TIME] and to cease calling. They continue calling and have recently threatened a lawsuit and wage garnishment.",
+    "immediate_cause": "supposedly returned check",
+    "root_cause": "incomplete or inaccurate records",
+    "parse_error": false
+  },
+  {
+    "category": "Money transfer, virtual currency, or money service",
+    "redacted_text": "I paid XXXX dollars for a service but did not receive the service I paid for. I contacted the seller but still did not receive the service I paid for",
+    "immediate_cause": "Seller did not deliver service",
+    "root_cause": "Seller did not deliver service",
+    "parse_error": false
+  },
+  {
+    "category": "Money transfer, virtual currency, or money service",
+    "redacted_text": "I wanted a net spend card because I moved into a new state and has. No identification for employment purposes. I asked a friend to order the card usinf her address but u never received my netspend cash app or pay pal card",
+    "immediate_cause": "Failed to receive Netspend Cash App card",
+    "root_cause": "Insufficient address verification process",
+    "parse_error": false
+  },
+  {
+    "category": "Money transfer, virtual currency, or money service",
+    "redacted_text": "[ORGANIZATION] is company at Issue. They are holding a payment for no legitimate reason. First said it would be [DATE_TIME], now saying it could be [DATE_TIME]. The same person has sent me money [DATE_TIME] in a row. [DATE_TIME] he wasn't able to for some reason and had to call them. He did and then updated his account per their direction and was able to send me the money. When I logged into my account to \" accept '' it, it let me accept it but then put the transfer on hold, it said for [DATE_TIME]. Now [DATE_TIME] later they are saying it could be on hold for [DATE_TIME]. Again, no explanation whatsoever for what the original problem was, why the payee needed to do something different this time, and why the transfer to me is now on hold. It's only {$530.00} so not worth a [ORGANIZATION]  complaint, which I told them I would file and I did that as well as filing this complaint with [ORGANIZATION]. First the payee had to call [ORGANIZATION] customer service just to get the transfer initiated on his end. Then I had to call [DATE_TIME] with no resolution on a [DATE_TIME] call to [PERSON] and spoke with [PERSON].",
+    "immediate_cause": "Transfer to customer put on hold",
+    "root_cause": "Lack of clear communication",
+    "parse_error": false
+  },
+  {
+    "category": "Money transfer, virtual currency, or money service",
+    "redacted_text": "Case # XXXX - Your account has been locked My account is blocked from [LOCATION]/XX/2020. Support is not responding, I have been writing to them for [DATE_TIME], there is no reaction. I wrote to [PERSON], where they replied that my ticket was handed over to a specialist, but I still did not get an answer. Help me.",
+    "immediate_cause": "Support not responding to tickets",
+    "root_cause": null,
+    "parse_error": false
+  },
+  {
+    "category": "Money transfer, virtual currency, or money service",
+    "redacted_text": "[ORGANIZATION] name is  [PERSON]   XXXX .i send it the amount of {$250.00} for my sister in my country and i was very specific with the lady whoever attemp my phone call than i want to my sister got the money in the window of the bank.but she did everything [URL]e put the money in  one account th an l never mention to [URL] sister has to go two times to the [URL] try to got the [URL]d they told her than there is no [URL]at peace me [URL]cause the has to waist ther time for no [URL]is comp i s Ria  XXXX",
+    "immediate_cause": "Money was put in the wrong account",
+    "root_cause": null,
+    "parse_error": false
+  },
+  {
+    "category": "Money transfers",
+    "redacted_text": "[DATE_TIME] I deposited A {$50.00} deposit with google \" wallet ''. That whole wallet was closed and I want a refund of the {$50.00}.",
+    "immediate_cause": "Google wallet was closed",
+    "root_cause": "null",
+    "parse_error": false
+  },
+  {
+    "category": "Money transfers",
+    "redacted_text": "My brother and I located an ad on [ORGANIZATION] offering discounted airfare. Contacted the ad, was advised that they could book our airline [COMPLAINT_ID] at a discounted price. The other person booked our air, provide us with confirmation numbers, I even called the airline to verify. \n\nMy brother thought it was ok since we had proof of our [COMPLAINT_ID]. He wired {$5200.00} to the receipents bank. [DATE_TIME] [PERSON] out of the [ORGANIZATION] [COMPLAINT_ID] booked were canceled per the airlines due to fraud. I then contacted my bank and the receiving bank. The receiving bank advised to file a recall wire transfer, we did so. Plus the receiving bank wanted an indemnification agreement. Our bank refused saying that our situation was not classified as fraud. It is fraud. I have police reports as well as fraud reports to prove otherwise. The gentleman who took our payment for the airlines basically laughed at us telling us there was nothing no one could do even the [ORGANIZATION]",
+    "immediate_cause": "Received confirmation numbers",
+    "root_cause": "Lack of proper verification process",
+    "parse_error": false
+  },
+  {
+    "category": "Money transfers",
+    "redacted_text": "I sent money to my sister who 's on vacation in [LOCATION], [ORGANIZATION] held the transaction saying it need to be review and they will contact me after two hrs. My sister told me to cancel if that 's how long it will take so I called [DATE_TIME] after to cancel and they did not cancel my transaction. Their email confirmation clearly states that I can cancel within [DATE_TIME] after sending money unless it waa picked up but now that I did they 're giving me the run around. I spoke with a rude supervisor who told me that they 're investigating my transaction and will not get an answer until 1 to 3 business days and that I agreed to the terms and conditions so I have to wait until they decide to approve or cancel the transaction.",
+    "immediate_cause": "Transaction held for review",
+    "root_cause": "Insufficient clarity in cancellation policy",
+    "parse_error": false
+  },
+  {
+    "category": "Money transfers",
+    "redacted_text": "I was owed money, and the person who needed to pay me offered to do so via [ORGANIZATION]. After looking at [ORGANIZATION] 's website, which promised, \" Send friends, family, or customers your personal [URL] link wherever you talk to them - text, email, or post. They click the link and enter the amount - no cash, no checks, no awkwardness. '' It promised fast, easy transfer. What it did n't say was that the funds would be held by [ORGANIZATION] for [DATE_TIME]. Had I known that [ORGANIZATION] would sit on the money for XXXX WEEKS I would have asked for a check or cash. [ORGANIZATION] gives the sender the impression that money was delivered right away, and nothing could be a bigger lie.",
+    "immediate_cause": "[ORGANIZATION] promised fast transfer",
+    "root_cause": "inadequate transparency about holding period",
+    "parse_error": false
+  },
+  {
+    "category": "Money transfers",
+    "redacted_text": "After [DATE_TIME] of sending money to my in-laws through western union I am now being denied access to the service without explanation. Since [ORGANIZATION] will not allow me to send money any longer. I have contacted them several times and they say they are not allowed to tell me why my account has been closed, why my receipt history been deleted, or why I am no longer allowed to send money.",
+    "immediate_cause": "Account closure without explanation",
+    "root_cause": null,
+    "parse_error": false
+  },
+  {
+    "category": "Mortgage",
+    "redacted_text": "I was struggling to make payment for beginning in [DATE_TIME]. I contacted Prime Lending ( mortgage company ). When I spoke to the loan modification officer, about my options : they asked if I wanted to keep my home. I responded Yes, absolutely. The loan modification officer recommended a Loan Modification-and immediately sent me a package to fill out. The taskings forms and time required to submit this package to approximately 1-moth to complete. This process began [PERSON], then the completed package was sent out [LOCATION], via fax. They informed us that I needed to have been behind at least 1-month late on my mortgage payment at time of review-which I was. After numerous calls, request for additional information ( [DATE_TIME] after initial fax ), time and energy spent to make sure all the details were covered / over [DATE_TIME] of labor. finally the results were received on [PERSON]. We received the mortgage company 's results, a simple letter ... Not approved for loan modification. The only two Options I qualified for were \" Short Sale '' and a DEED in Lieu of foreclosure. '' I am a [ORGANIZATION] veteran only requesting a loan modifications and was instead offered foreclosures? This is completely unimaginable after [DATE_TIME] of dealing with this company ( Prime Lending ).",
+    "immediate_cause": "Loan modification process began",
+    "root_cause": "Inadequate communication of requirements",
+    "parse_error": false
+  },
+  {
+    "category": "Mortgage",
+    "redacted_text": "I am refinancing my house for which I have about 30 percent equity. I visited [ORGANIZATION] web site to check their rates, but it only lists the lowest rate for conventional loans without the number of [DATE_TIME] and points. From there, their web site directed me to a loan product at a reasonable interest rate and one point. So I applied, paid a fee, and was assigned a processing agent. When I got the documents, however, it had a large {$7000.00} pre-paid mortgage insurance and a [DATE_TIME] [ORGANIZATION] payment of {$250.00}. I had to stop their digital approval process and tried to contact the processing agent by telephone and email. She has not returned me voice mail or email. Closer look at the paper work it appears the web site steered me towards an [ORGANIZATION] loan. The processing agent should have seen that with 30 percent equity or [ORGANIZATION] ratio, I didn't need that product and its a bit disingenuous that she didn't contact me to confirm that's what I really wanted.",
+    "immediate_cause": "Web site steered me towards wrong loan",
+    "root_cause": "Inadequate loan product matching logic",
+    "parse_error": false
+  },
+  {
+    "category": "Mortgage",
+    "redacted_text": "[ORGANIZATION] decided to pay our property taxes in full in order to get the 2 % discount. Our escrow was set up for [DATE_TIME] payments. We found out what they did when we got our yearly escrow estimator. At first when I called, they said the town only sent them the lump sum amount. The town and [PERSON] both said that was not true which forced [ORGANIZATION] to admit it was their decision. We are asking them to go back to [DATE_TIME] payments for [DATE_TIME] and they are refusing. Lump sum would have been fine if the escrow account had been set up that way originally but it was not. We did not authorize this change and we do not care about saving the 2 %, it saves us less than {$100.00}. This is our money paying our taxes.",
+    "immediate_cause": "Paying taxes in full to get discount",
+    "root_cause": "Miscommunication or misunderstanding about escrow setup",
+    "parse_error": false
+  },
+  {
+    "category": "Mortgage",
+    "redacted_text": "The website is in perpetually not working. I cant get any info on my mortgage loan. \nI cant even provide my account number for this complaint because I cant access my information. \nI have had this problem repeatedly, over and over, and it is pervasive. When I call, they say the site is being worked on. This is UNACCEPTABLE.",
+    "immediate_cause": "Website is perpetually not working",
+    "root_cause": "Insufficient IT maintenance and support",
+    "parse_error": false
+  },
+  {
+    "category": "Mortgage",
+    "redacted_text": "I lost my job in [LOCATION]/XX/2018, due to no fault of my own. I was Also experiencing health problems. I filed a forbearance but my home was still turned over for foreclosure. \nI was constantly getting different info from [ORGANIZATION] even up to the time I received notice of foreclosure. I was offered an unfair modification plan that will not benefit me or my situation. \nAdding on terms to my existing loan is not much help. \nThere are other modification plans that would be more beneficial. \n\nThere is no hardship financial homeowner assistance programs Available. \nThe hardest hit fund was depleted. \nI need honest help saving my home.",
+    "immediate_cause": "Foreclosure notice received",
+    "root_cause": "Insufficient assistance programs",
+    "parse_error": false
+  },
+  {
+    "category": "Other financial service",
+    "redacted_text": "I was told, i could have my loans cut by 50 %. All I have to do was pay a fee upfront and then [DATE_TIME] after I would agree to pay a certain amount [DATE_TIME] for [DATE_TIME] and my loan would be paid off. This happened in [LOCATION]. But now in [LOCATION], I started to get letters about paying for this loan I thought I already paid off [DATE_TIME]. Turns out I did enter an agreement to pay [DATE_TIME] with the right company but the Company i originally spoke to where the fee went to were scammers. No company heard of them and when i looked at my [PERSON] statements to get the name and search who they were. It says they closed down and had other [COMPLAINT_ID] for asking for fee to settle loans upfront. Company that I think scammed me are called [PERSON] and [ORGANIZATION].",
+    "immediate_cause": "Paid fee upfront",
+    "root_cause": "Misrepresentation by scammers",
+    "parse_error": false
+  },
+  {
+    "category": "Other financial service",
+    "redacted_text": "I received a card in the mail with [ORGANIZATION] phone number ( no name ) advertising home loan modification back in [LOCATION] of [DATE_TIME]. spoke with a case manager [PERSON] gave him all my info. And explained that I have been denied for a mod on my loan in the past. He explained that they work with government agencies to force lenders to do a loan mods. I signed up for a total of {$2400.00} All they did was send out a few emails and and made some phone calls but got no results what so ever. sale on house was temporary stopped only because i filled a complaint with lender 's fraud dept. All my credit card closed due to backruptcy scheme that they practice through a third [URL]l i got from them was a bunch of broken promises, lot of lies, unaswered and unreturned calls, bad credit, stress and a huge financial lost and I sill lost my house. [ORGANIZATION] had cease and desist order in [LOCATION] where i live at the time of signing and should not have collected money up front for these type of service. This company use to go by colleagues in law which has been accused of same practices and closed and as seen on their reconciliation form acknodwlede [URL]ey are a fraud and need to be [URL]ease help me get my money back!",
+    "immediate_cause": "Received unsolicited card with phone number",
+    "root_cause": "Deceptive business practices",
+    "parse_error": false
+  },
+  {
+    "category": "Other financial service",
+    "redacted_text": "Everytime I try to cash my paycheck at [ORGANIZATION] or any other check cashing service in denied due to a company named [PERSON]. I do n't understand why everytime I call them they can never give me a reason why they deny me. This is not fair and a paycheck is a valid check! I have provided this company my id and asked for a copy of my file but nothing explains why they have me red flagged",
+    "immediate_cause": "Check flagged by [PERSON]",
+    "root_cause": "Inadequate ID verification process",
+    "parse_error": false
+  },
+  {
+    "category": "Payday loan",
+    "redacted_text": "This company has illegally shared information about my payday loan without my written consent to my significant other and to my minor brother.",
+    "immediate_cause": "Shared loan information with family members",
+    "root_cause": "Lack of proper data protection measures",
+    "parse_error": false
+  },
+  {
+    "category": "Payday loan",
+    "redacted_text": "I was n't not informed by [ORGANIZATION] of the 614.736 [DATE_TIME] rate. I borrowed {$500.00} and was told I would have to pay {$120.00} in interest. I did not know the {$500.00} loan would cost me {$1900.00} totaling {$2400.00} for the entire loan. I have currently made [LOCATION] payments totaling XXXX.",
+    "immediate_cause": "Told interest rate of $120.00",
+    "root_cause": "Inadequate loan terms disclosure",
+    "parse_error": false
+  },
+  {
+    "category": "Payday loan",
+    "redacted_text": "hi. i have loaned money from ace cash express several times in [DATE_TIME] understand that your company has settled a financial agreement from this [URL]ease get back to me about this [URL]ey charged me an excess of interst, probably more than legal limit",
+    "immediate_cause": "Excess interest charged on loan",
+    "root_cause": "Inaccurate interest calculation software",
+    "parse_error": false
+  },
+  {
+    "category": "Payday loan",
+    "redacted_text": "The lender withdrew funds from my bank account [DATE_TIME] from the normal pay date. When I called I was informed that due to the holiday they redrew the funds earlier and it resulted with my account being overdrawn.. I also looked over my payment history dating back [LOCATION] [DATE_TIME] up to [PERSON] and noticed that I am paying more when my previous balances were less and my payments were less.",
+    "immediate_cause": "Holiday redrew funds earlier",
+    "root_cause": null,
+    "parse_error": false
+  },
+  {
+    "category": "Payday loan",
+    "redacted_text": "I signed up for a loan through [ORGANIZATION] on XX/XX/XXXX in the amount of {$800.00}. I was told and was under the impression that I would receive a one time finance charge of {$280.00} for a total repayment of {$1000.00}. I made my first payment on [ORGANIZATION] and went into my account [DATE_TIME] [LOCATION]/XX/XXXX to check the remainder of the balance. The amount had n't changed so I looked into it further. I came to find out that the total finance charges are going to be over {$6000.00}! If I had known that this was going to be the case, I NEVER EVER would have agreed to the terms. The finance charges alone are more than my [DATE_TIME] car payment! I am a single mother of [PERSON] that does not make much money. There is no way this can be right! Please help!",
+    "immediate_cause": "High finance charges on loan",
+    "root_cause": "Unclear or misleading loan terms",
+    "parse_error": false
+  },
+  {
+    "category": "Payday loan, title loan, or personal loan",
+    "redacted_text": "I asked for a rate reduction on my line of credit and received First time : We regret that we are unable to offer member-initiated interest rate reviews on our Checking Line of Credits. The interest rate assigned at the time of the approved application will be the interest rate until the account is closed. However at the discretion of [ORGANIZATION], they may adjust this rate, as with all [ORGANIZATION] rates. Any decision regarding adjustments will be based on a number of factors, including fairness to our members, current economic conditions and the overall competitive picture. [ORGANIZATION] may change the terms of [ORGANIZATION] by sending written notice to the member [DATE_TIME] prior to the date the change becomes effective. \n\nSecond time : We regret that a more favorable reply could not be made to your rate reduction request. Your feedback regarding your experience with our members service representatives have been brought to the attention of our training staff who will review the matter and follow-up with the personnel involved. Every effort will be made in the future to provide you with the prompt and efficient service to which you are entitled as a member of [ORGANIZATION]. \nThird time : We are unable to revert your rate due to not receiving a lien recorded title for the XXXX  XXXX. Once the lien recorded title is received, the interest rate will be reverted back to the Collateral rate. If we can be of further assistance, please let us know. Thank you for your membership. \nFourth Time : Thank you reaching out for clarification, there was not a title lien on your Checking Line of Credit ( CLOC ) as we don't have collateral CLOC products. \nRegarding changing rates on [ORGANIZATION], unfortunately, we are unable to offer member-initiated interest rate reviews on our [ORGANIZATION]. The interest rate assigned at the time of the approved application will be the interest rate until the account is closed. However, at the discretion of [ORGANIZATION], they may adjust this rate, as with all [ORGANIZATION] rates. Any decision regarding adjustments will be based on a number of factors, including fairness to our members, current economic conditions and the overall competitive picture. [ORGANIZATION] may change the terms of the CLOC by sending written notice to the member [DATE_TIME] prior to the date the change becomes effective. If you have further questions, please let us know.",
+    "immediate_cause": "Rate reduction request",
+    "root_cause": null,
+    "parse_error": false
+  },
+  {
+    "category": "Payday loan, title loan, or personal loan",
+    "redacted_text": "Im on [PERSON] and having a tough time making financially. I saw the [ORGANIZATION] commercial and applied for a {$250.00} loan. I was approved and when paid back they sent a message saying I could apply for a {$2600.00} loan. Rent was due and I was desperate so I applied. They sent me a message saying I was approved and they were putting the money in my account. They sent me a document packet with a promissory note. When I open the document for the first time I was given the terms. They are charging me a total of {$8000.00}. The interest rate is 189.13 %. How is this legal? Shouldnt I have been give this info upfront so I could have decided if I wanted to do business with them. I would think people applying for Pay Day loans are experiencing some type of financial hardship and this company is taking advantage of them. Is there anything that can be done about this predatory behavior? My rent takes up half of my [PERSON] check. After paying back CashNet I only have about a fourth of my [DATE_TIME] income to buy food, pay utilities, pay for medical and insurance, buy gas, etc. Had I known upfront [ORGANIZATION] did people this way I would have never applied for a loan with them.",
+    "immediate_cause": "Received loan approval message",
+    "root_cause": "Lack of transparent lending terms disclosure",
+    "parse_error": false
+  },
+  {
+    "category": "Payday loan, title loan, or personal loan",
+    "redacted_text": "What a mess. We went to [LOCATION] 's XXXX store in [LOCATION], [LOCATION] to buy a tv. The salesman said he could get my husband approved for [DATE_TIME] no interest since my husband has an existing [ORGANIZATION] 's acct. The salesman came back & said that my husband was not approved but to add me to the application. I told him numerous times my credit was not good and that I thought it was a waste of time. He said no lets add you because they usually approve apps with 2 incomes. so I said ok, gave him my drivers license and he added my info to the application. The next thing he tells us is \" Boom You all got approved '' So I was under the impression with both of us on the loan we were approved for [DATE_TIME] no interest. The salesman tells us we have credit line of {$6900.00}. He says its better to buy everything you need now then to wait, buy 1 item and then pay it off, come back and buy the rest once your 1st item is paid off because sometimes you don't get approved. I thought okay we need a bed, its not an emergency, but we need one. We believed that we were on [DATE_TIME] no interest loan. AT NO TIME DID OUR SALESMAN EVER DISCLOSE OUR INTEREST RATE OR FEES. He said \" I got your payments at {$340.00} '' I said okay, still thinking we were at a [DATE_TIME] no interest loan. The salesman handed me a blank pad to initial. I added my initials 3 times. he never explained what I was signing. Salesman said I was able to add on extended warranty for {$340.00}. I said okay, thinking I would see the papers once we were thru signing. THAT NEVER HAPPENED> HE TOLD ME [PERSON] would email paperwork to us. I thought okay, weird, I've never bought anything without seeing the paperwork and having everything that we are buying explained to us but OK. Salesman said [ORGANIZATION] would be delivered [DATE_TIME]. \nWe left and when I got home checked our email. Salesman had included in our loan, [DATE_TIME] extended warranty, [ORGANIZATION] warranty, Credit life and/or [ORGANIZATION] without ever telling us how much these would cost. Then I saw the interest rate for what we had bought. It was over 24 % APR. I WOULD NEVER HAVE BOUGHT THESE ITEMS IF I KNEW THAT WE COULD NOT GET AT LEAST 1 YEAR NO INTEREST. My husband existing acct was for [DATE_TIME] no interest. It had been [DATE_TIME] and we were ready to buy another item with the same terms ( [DATE_TIME] no interest ). \nSO THIS IS A BIG RIP OFF! Also I called salesman [DATE_TIME], I said why did you add all that stuff on, you never told me anything about it. Didn't get our approval. and I thought we were getting 0 % interest for [DATE_TIME]. Then he said just send me proof of homeowners policy and I'll have credit life & property insurance removed. So I did, I had to call my insurance agent and ask for a copy. I forward declaration to salesman by email expecting him to remove all those coverages we never consented to. he said okay, I will fax these over. I NEVER HEARD BACK FROM HIM CONFIRMING HE CANCELLED EXTRA INSURANCE we didn't consent to. I called on Sat XX/XX/23 [DATE_TIME] to [ORGANIZATION] customers service to confirm that they received cancellation of all the extra stuff we never consented to and they said NO, \" Im sorry salesman never sent over your insurance policy or cancellation. Even though I have emails to him and talked to him on the phone asking him 3x to cancel all that stuff. I AM SO UPSET. THey are ripping off people it is not right.",
+    "immediate_cause": "Salesman added extra insurance without consent",
+    "root_cause": "Lack of transparency in sales practices",
+    "parse_error": false
+  },
+  {
+    "category": "Payday loan, title loan, or personal loan",
+    "redacted_text": "I was [DATE_TIME] late on paying the entire full balance because I dont get the bills telling me promotional rate is done. \n\nEven all the emails didnt have the dates written. \n\nSo payment was due in [LOCATION] but I guess it was [DATE_TIME] late and I was charged {$1400.00} in interest only!! \n\nIts my fault for not paying after [DATE_TIME] but I never got notices or even few day grace period",
+    "immediate_cause": "Promotional rate notification missing",
+    "root_cause": "Inadequate billing communication",
+    "parse_error": false
+  },
+  {
+    "category": "Payday loan, title loan, or personal loan",
+    "redacted_text": "I currently am trying to find a new job after losing my first one. Since then I have not been able to pay my loan and I have explained this. I am being harassed constantly by gold star finance. [PERSON] comes to my house embarrassing me in front of my family and friends telling me I need to come in and see her. I also have been receiving several phone calls and left several voicemails everyday from gold star. I'm just sick of it. They threatened to come take my belongings as collateral and damage my property to do so. It's very depressing. When I get the cash I can come pay them. Other than that I really wish they would stop harassing me. It makes me want to just end it. I can barely pay my Car note. This Is a small town with [LOCATION] employers and they won't hire me anywhere. Ive been trying to move so I can pay my bills but I have no gas money to keep driving. The XXXX all starts with losing my job then being harassed by loan companies. I hate my life because of this.",
+    "immediate_cause": "Gold Star Finance's phone calls and visits",
+    "root_cause": "Poor financial management due to job loss",
+    "parse_error": false
+  },
+  {
+    "category": "Prepaid card",
+    "redacted_text": "On [DATE_TIME] XX/XX/XXXX I purchased a bunch of {$200.00} [ORGANIZATION] gift cards at [PERSON]. When I tried to use them on [LOCATION]/XX/XXXX, [PERSON] of them had been hacked. This is absolutely negligence on the part of [ORGANIZATION]. They know how easily their cards are to hack and this is not the first time this has happened to me. When you try to file a claim with them, they put the whole onus on you to prove that you didnt make the charge. I 've even figured out how they are being hacked and have offered to explain this to the bank but they do n't care. I should n't have to wait [DATE_TIME] for [ORGANIZATION] to repay me. Please help me ( the consumer ) not get taken advantage of by these banks!",
+    "immediate_cause": "Gift cards had been hacked",
+    "root_cause": "Insufficient security measures",
+    "parse_error": false
+  },
+  {
+    "category": "Prepaid card",
+    "redacted_text": "I have a rushcard ... they were having some kind of technical work done on the cards I guess switching them over [PERSON], now I 'm unable to use my card that my child support payments are deposited on. I need to know when will I be able to use my card again.",
+    "immediate_cause": "Technical work on cards",
+    "root_cause": null,
+    "parse_error": false
+  },
+  {
+    "category": "Prepaid card",
+    "redacted_text": "I 've been having payroll deposit my bi-monthly check deposited into my prepaid rush card for [DATE_TIME]. [PERSON]/XXXX/15 I have not been able to access my funds. After calling all this past weekend and being hung up on most of the time, I finally got through to a live person and was told thhere is no pending deposit on my account. [DATE_TIME] I spoke with payroll at my employers HR department and they confirmed it had been sent like always. I have a small amount deducted from each pay go into a savings account at a local credit union and those funds were available. I am constantly told by rush card that they do not see a deposit and to keep checking. This is the XXXX day I have not been able to access my funds and have had to borrow money to pay light bill and have a car payment due accumulating late fees.",
+    "immediate_cause": "No pending deposit on account",
+    "root_cause": null,
+    "parse_error": false
+  },
+  {
+    "category": "Prepaid card",
+    "redacted_text": "Rushcard did a maintenance update and locked everyone out of their accounts for [DATE_TIME] and it is still going on at the moment. Cardholders have not had access to their money such as direct deposits, money loads, and [PERSON]. Contacting the company is hectic and you will be on hold for [DATE_TIME] or just get hunged up on. They say they do not know when the system will be back up so that people can access their funds.",
+    "immediate_cause": "Maintenance update was performed",
+    "root_cause": "Insufficient communication and planning",
+    "parse_error": false
+  },
+  {
+    "category": "Prepaid card",
+    "redacted_text": "I was suppose to recieve a reversal from the merchant [DATE_TIME]. However it has n't posted to my account there was an atm error in which the money that I was suppose to recieve was not dispensed to me however the full amount wss charged to my card. \nI have contacted rush card on a consistent bases just to get the run around. I am pregnant and ca n't eat because they have took my money. I have no help! I am devastated please help me!",
+    "immediate_cause": "ATM error did not dispense funds",
+    "root_cause": "insufficient ATM infrastructure maintenance",
+    "parse_error": false
+  },
+  {
+    "category": "Student loan",
+    "redacted_text": "Upon graduating, I notified [ORGANIZATION] to initiate repayment. {$55000.00} in private student loans became over {$75000.00} instantly as they added interest all the way back to day one. I did not know that this was going to happen. My payments between private and federal loans are {$1200.00} per month. I earned a XXXX degree in [LOCATION] and bring home $ XXXX- {$800.00} per week. I can not afford to support myself in these circumstances.",
+    "immediate_cause": "Added interest from day one",
+    "root_cause": "Lack of clear loan information disclosure",
+    "parse_error": false
+  },
+  {
+    "category": "Student loan",
+    "redacted_text": "From [LOCATION]/XX/2019, the loan payment has adjustment per income which I agree and the agreed amount was debited automatically. But, [ORGANIZATION] indicates that the old, prior [DATE_TIME] payment amount, was also due at the same time ( in [LOCATION] ) as the adjusted amounts and shows that there is a late payment for [LOCATION]/XX/2019. On top of that, they charged interests of the invalid late payment.",
+    "immediate_cause": "Multiple payments deducted same day",
+    "root_cause": "Inadequate system logic",
+    "parse_error": false
+  },
+  {
+    "category": "Student loan",
+    "redacted_text": "On [LOCATION]/XX/XXXX, [ORGANIZATION] posted a payment of {$10000.00} to my student loan account. The envelope containing this check had a second check in the amount of {$4200.00} in addition to a copy of my billing statement. The {$4200.00} check did not post to my account. On [ORGANIZATION], I called customer service and talked to a supervisor. I  was told that my check was deposited in a holding account because they did not know where it was to be applied. I was told that the money would be applied to my account and would reflect on [ORGANIZATION]. It is now [LOCATION]/XX/XXXX and the payment still has not posted to my account. This is a large sum that will pay off my loan. I do not know how to get them to apply the payment. A stop payment is not an option as they have already negotiated the check. Please help!",
+    "immediate_cause": "Second check did not post",
+    "root_cause": "Lack of clear application instructions",
+    "parse_error": false
+  },
+  {
+    "category": "Student loan",
+    "redacted_text": "I have had my federal student loans in a forebearance status due to financial difficulties. I have explained this to [ORGANIZATION] on multiple occasions and asked that my private student loans be offered a forbearance or similar waiver to coincide with my federal loans. I was not offered any assistance or alternatives, but instead told I had to repay my loans despite the hardships I was experiencing. Due to me not being able to pay, my private student loan went into collections, which has made it difficult for me to obtain credit. I am currently in good standing with my federal loans with an approved forbearance status.",
+    "immediate_cause": " Denied waiver for private loans",
+    "root_cause": "Inadequate financial assistance options",
+    "parse_error": false
+  },
+  {
+    "category": "Student loan",
+    "redacted_text": "To Whom It May Concern : I saw the news articles regarding the lawsuit again [ORGANIZATION]. The issues outlined in the article are my exact experiences. \n-My payments were mis-allocated. I final caught on and now send a paper check and write which loan to put the payment on. I then have to check to make sure this actually happened correctly. It often does not. \n- I have tried to overpay several times and have been told I ca n't. They told me another payment is not due until [DATE_TIME]. I have had to argue to overpay on my loans. \n- At one point, some of the loans were in deferment per my request. I was told there would be no penalty. I later found out that they were reporting the loans as missed payments which showed up on my credit, thus hurting my credit score. To [DATE_TIME], this issue affects the interest rate on my home mortgage. \n\nThis company is infuriating, difficult to work with, and deceitful. I have all of my documentation at home. If there is a way to get involved, I would love to be included. I want to see some repercussions. For most of us coming out of college, we have never dealt with debt to this amount. It is a scary process. Being lied to has resulted in negative consequences that now affect me [DATE_TIME]. \n\nXXXX XXXX",
+    "immediate_cause": "Mis-allocated payments and conflicting information",
+    "root_cause": "Inadequate loan processing and communication system",
+    "parse_error": false
+  },
+  {
+    "category": "Vehicle loan or lease",
+    "redacted_text": "I tried to make a payment on my account via phone through a third party that the lease company told me to utilize. The company was not open and their automated system kept kicking me out. I then tried to make the payment on the internet with negative results. I tried to contact [ORGANIZATION] to rectify the problem but there was no one at their office to receive my phone call. Their negligence caused my credit to have a [DATE_TIME] marker which should be corrected.\nI have phone records to show my attempts to pay [DATE_TIME].",
+    "immediate_cause": "Third-party payment system was closed",
+    "root_cause": "Lack of communication from lease company",
+    "parse_error": false
+  },
+  {
+    "category": "Vehicle loan or lease",
+    "redacted_text": "[ORGANIZATION] will not request the title from CA even though I have a buyer lined up to purchase the vehicle. They will only request the title if you are changing the name or the state of the title.",
+    "immediate_cause": "buyer lined up to purchase vehicle",
+    "root_cause": "inadequate process for title requests",
+    "parse_error": false
+  },
+  {
+    "category": "Vehicle loan or lease",
+    "redacted_text": "Made a payment on [ORGANIZATION] and committed to making another payment on [ORGANIZATION] in efforts to pay the passed due balance as currently the vehicle is sitting over [DATE_TIME] passed due. I have made the lender aware of the situation but they continue to call me several times a day ranging between 2 and 5 times. I have juat started a job and am currently undergoing [PERSON] screenings. I have assured the lender i am going to pay them. Im also dealing with a custody battle and a divorce. I am overwhelmed with life and everytime my phone goes off it gives me an anxiety attack. Them calling me so much is affecting my health and i am having to constantly having to look out my window just to make sure my car is still there so i can make the money to pay them.",
+    "immediate_cause": "Lender continues to call repeatedly",
+    "root_cause": "Overwhelming personal circumstances",
+    "parse_error": false
+  },
+  {
+    "category": "Vehicle loan or lease",
+    "redacted_text": "[ORGANIZATION] agreed multiple times to remove a late payment from being reported to the credit bureaus after the loan was paid in full and completely closed. The dealership did not report the numerous problems with the vehicle before purchasing and a I was stuck with multiple thousand dollar repairs. They have agreed multiple times to delete the late payment.",
+    "immediate_cause": "Late payment not deleted",
+    "root_cause": "Dealership concealed vehicle problems",
+    "parse_error": false
+  },
+  {
+    "category": "Vehicle loan or lease",
+    "redacted_text": "[ORGANIZATION] The company is reporting inaccurate information on my credit report. There should be NO LATE payments reporting as I was approved for an Extension on my loan. Please review my file and correct the errors immediately.",
+    "immediate_cause": "Inaccurate late payments reported",
+    "root_cause": "Insufficient loan modification process",
+    "parse_error": false
+  }
+]
