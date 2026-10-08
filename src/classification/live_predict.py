@@ -419,9 +419,9 @@ def main() -> None:
 
         agreement = result["agreement"]
         if agreement["needs_review"]:
-            print(f"\n  ⚠️  FLAGGED FOR REVIEW: {agreement['review_reason']}")
+            print(f"\n  [FLAGGED FOR REVIEW] {agreement['review_reason']}")
         else:
-            print(f"\n  ✅ Unanimous agreement (avg confidence: {agreement['average_confidence']})")
+            print(f"\n  [OK] Unanimous agreement (avg confidence: {agreement['average_confidence']})")
 
         print("\nFinal classification:")
         print(f"  Domain: {result['final_classification']['domain']}")

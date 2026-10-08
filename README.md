@@ -1,180 +1,175 @@
 # Privacy-Preserving Complaint Intelligence Platform
 
-An NLP platform that redacts personally identifiable information (PII) from
-customer complaints **before** any downstream analysis happens, then
-classifies, and analyzes the anonymized text to surface actionable
-insights — without ever exposing sensitive customer data.
+An enterprise NLP platform that redacts personally identifiable information (PII) from consumer financial complaints **before** any downstream analysis happens, then classifies, scores, and analyzes the anonymized text to surface operational intelligence — without ever exposing sensitive customer data.
 
-The project combines privacy-by-design document processing (NER-based PII
-redaction) with comparative NLP methodology (classical ML vs. sentence
-embeddings vs. fine-tuned transformers) for complaint domain classification,
-and is built to comply with data-privacy principles found in regulations
-such as GDPR, HIPAA, and India's DPDP Act.
+Built strictly under Privacy-by-Design principles aligning with GDPR, HIPAA, and India's DPDP Act.
 
-## Pipeline Overview
+---
+
+## Architecture & Pipeline Overview
 
 ```
-Raw Complaint Text
-      |
-      v
-[1] PII Redaction  ---------------- Presidio (NER + custom regex recognizers)
-      |
-      v
-[2] Domain/Category Classification - TF-IDF+SVM | Sentence-BERT+LogReg | DistilBERT (fine-tuned)
-      |
-      v
-[3] Sentiment & Emotion Analysis -- (in progress)
-      |
-      v
-[4] Duplicate Detection ----------- Sentence-BERT + FAISS (planned)
-      |
-      v
-[5] Topic Modeling ----------------- BERTopic (planned)
-      |
-      v
-[6] Priority Prediction ----------- feature-based classifier (planned)
-      |
-      v
-Dashboard (Streamlit) -- privacy-safe aggregated insights, no PII surfaced
+                      +-----------------------------+
+                      |   Incoming Raw Complaint    |
+                      +--------------+--------------+
+                                     |
+                                     v
+                      +-----------------------------+
+                      |    Presidio PII Redaction   |
+                      |  (NER + Custom Regex PII)   |
+                      +--------------+--------------+
+                                     |
+                         [Redacted Narrative Only]
+                                     |
+       +-----------------------------+-----------------------------+
+       |                             |                             |
+       v                             v                             v
++--------------+             +---------------+             +---------------+
+|  TF-IDF+SVM  |             |  SBERT+LogReg |             |  DistilBERT   |
++-------+------+             +-------+-------+             +-------+-------+
+        |                            |                             |
+        +----------------------------+-----------------------------+
+                                     |
+                                     v
+                      +-----------------------------+
+                      |   Model Agreement Engine    |
+                      | (Consensus vs Escalation)   |
+                      +--------------+--------------+
+                                     |
+                      +-----------------------------+
+                      |   Hierarchical Classifier   |
+                      |    (Domain -> Sub-Issue)    |
+                      +--------------+--------------+
+                                     |
+       +-----------------------------+-----------------------------+
+       |                             |                             |
+       v                             v                             v
++--------------+             +---------------+             +---------------+
+|  Sentiment & |             | FAISS Vector  |             |  Causal Root- |
+|  Urgency ML  |             | Duplicate Det |             |  Cause Graph  |
++-------+------+             +-------+-------+             +-------+-------+
+        |                            |                             |
+        +----------------------------+-----------------------------+
+                                     |
+                                     v
+                      +-----------------------------+
+                      |   FastAPI & Streamlit UI    |
+                      |   (Real-Time Intelligence)  |
+                      +-----------------------------+
 ```
 
-## Status: What's Done So Far
+---
 
-### 1. Datasets
+## Core Capabilities & Implemented Modules
 
-| File | Rows | Purpose |
-|---|---|---|
-| `data/processed/complaints_small.csv` | ~3,242 | Domain classification training/eval. Stratified, cleaned sample of the CFPB Consumer Complaint Database. |
-| `data/eval/synth_data.json` | 30 | Synthetic, fully labeled complaints used to evaluate the PII redaction pipeline. Contains ground-truth spans for PERSON, EMAIL_ADDRESS, PHONE_NUMBER, ACCOUNT_NUMBER, AADHAAR_NUMBER, COMPLAINT_ID, and CREDIT_CARD. |
+### 1. PII Redaction Module (`src/redaction/`)
+Built on Microsoft Presidio Analyzer and Anonymizer, extended with custom regex recognizers (`custom_recognizers.py`) for entities Presidio does not detect natively:
+- `ACCOUNT_NUMBER` (e.g. `ACC-10023456`, `AC987654321`)
+- `AADHAAR_NUMBER` (e.g. `1234 5678 9012`)
+- `COMPLAINT_ID` (e.g. `CMP-2026-00001`, `CASE-12345`)
+- `CREDIT_CARD` (e.g. `4111 2222 3333 4444`)
+- `CREDENTIAL` (e.g. `username is john_doe99`, `password: hunter2`)
 
-CFPB's raw `Product` labels were consolidated into 9 unified categories
-(`Product_clean`) to correct for taxonomy revisions CFPB made over the
-years, which had fragmented semantically identical complaints across
-near-duplicate labels (e.g. "Credit reporting" vs. "Credit reporting,
-credit repair services, or other personal consumer reports"). Categories
-with fewer than 20 rows were dropped as statistically unreliable.
+**Evaluation Performance** (`python -m src.redaction.evaluate_redaction` on 30-complaint synthetic benchmark):
+- **Overall Recall**: **100.00%** (Zero PII leaks)
+- **Overall Precision**: **95.45%**
+- **Overall F1 Score**: **97.67%**
 
-### 2. PII Redaction Module (`src/redaction/`)
+### 2. Multi-Model Domain Classification & Agreement (`src/classification/`)
+Three distinct paradigms evaluated on an identical stratified split across 9 consolidated CFPB categories:
+- **TF-IDF + Linear SVM**: 74.38% accuracy, 74.61% weighted F1.
+- **Sentence-BERT + Logistic Regression**: 73.92% accuracy, 74.66% weighted F1.
+- **DistilBERT (fine-tuned transformer)**: Pretrained checkpoint in `models/saved/domain_classifier_distilbert/`.
+- **Model Consensus Engine**: Flags complaints for human review if classifiers diverge or average confidence drops below 0.40.
 
-Built on Microsoft Presidio, extended with custom regex-based recognizers
-(`custom_recognizers.py`) for entity types Presidio doesn't detect
-out of the box: `ACCOUNT_NUMBER`, `AADHAAR_NUMBER`, `COMPLAINT_ID`, and
-`CREDIT_CARD`.
+### 3. Hierarchical Classification (`src/classification/hierarchical_*`)
+Two-stage triage: Level 1 predicts the broad financial domain; Level 2 predicts granular sub-issues (e.g. *Debt collection -> Communication tactics*, or *Credit card -> Problem when making payments*) using 8 per-domain sub-classifiers.
 
-**Latest evaluation results** (`python -m src.redaction.evaluate_redaction`,
-30-complaint synthetic eval set):
+### 4. Sentiment, Emotion & Urgency Scoring (`src/sentiment/sentiment_emotion.py`)
+Analyzes redacted text for emotional tone (anger, frustration, anxiety, satisfaction) and outputs an operational **Urgency Score** ($0.0 - 1.0$) based on distress indicators, sentiment polarity, and legal escalation keywords.
 
-| Entity Type | Precision | Recall | F1 |
-|---|---|---|---|
-| PERSON | 83.33% | 100.00% | 90.91% |
-| EMAIL_ADDRESS | 100.00% | 100.00% | 100.00% |
-| PHONE_NUMBER | 88.24% | 100.00% | 93.75% |
-| ACCOUNT_NUMBER | 100.00% | 100.00% | 100.00% |
-| AADHAAR_NUMBER | 100.00% | 100.00% | 100.00% |
-| COMPLAINT_ID | 100.00% | 100.00% | 100.00% |
-| CREDIT_CARD | 100.00% | 100.00% | 100.00% |
-| **Overall** | **95.45%** | **100.00%** | **97.67%** |
+### 5. Semantic Duplicate Detection (`src/duplicate_detection/semantic_similarity.py`)
+Uses `SentenceTransformer` (`all-MiniLM-L6-v2`) embeddings indexed with **FAISS** (with cosine similarity fallback) to identify prior matching or near-duplicate complaints in milliseconds.
 
-100% recall across every entity type — no PII is missed. Remaining
-precision loss is limited to Presidio's built-in PERSON and PHONE_NUMBER
-recognizers (spaCy-based NER), not the custom regex recognizers, all of
-which are now perfect.
+### 6. K-Anonymity Privacy Audit & Mitigation (`src/privacy/`)
+Audits record-level re-identification risk from structured quasi-identifiers (`Product_clean`, `Sub-product`, `Issue`, `received_month`):
+- **Baseline Risk**: 47.38% uniquely identifiable ($k=1$), 82.02% at risk ($k < 5$).
+- **Mitigation Strategy (Quarter Binning + Drop Subproduct)**: Reduces uniquely identifiable records to **12.95%** and at-risk records to **44.73%** (a **37.29 percentage-point risk reduction**).
 
-### 3. Complaint Classification Module (`src/classification/`)
+### 7. Causal Root-Cause Graph (`src/causal/`)
+Clusters extracted cause-and-effect phrases into a directed semantic network (`models/saved/causal_graph.gexf`), ranking the systemic root causes driving downstream complaints.
 
-Three approaches trained and evaluated on the same consolidated category
-schema, for a direct comparison of classical ML, embedding-based, and
-transformer fine-tuning methods:
+### 8. End-to-End Orchestration & REST API (`src/pipeline/`, `api/`)
+- Unified `ComplaintPipeline` singleton for real-time and batch execution.
+- Production-ready FastAPI endpoints with automatic Pydantic validation:
+  - `POST /complaints`: Ingest raw complaint, redact PII, run 3-way classification, sentiment, duplicate check, and agreement evaluation.
+  - `GET /dashboard-data`: High-level aggregated metrics, category distributions, and privacy statistics.
+  - `GET /complaints/review-queue`: Review queue for flagged complaints.
+  - `POST /complaints/{id}/resolve`: Mark escalated complaints as resolved.
+  - `GET /health`: Liveness probe.
 
-| Model | Accuracy | Weighted F1 |
-|---|---|---|
-| TF-IDF + Linear SVM (`baseline_tfidf_svm.py`) | 74.38% | 74.61% |
-| Sentence-BERT + Logistic Regression (`sentence_bert_classifier.py`) | 73.92% | 74.66% |
-| DistilBERT (fine-tuned) (`distilbert_finetune.py`) | *pending run* | *pending run* |
+### 9. Interactive Streamlit Dashboard (`dashboard/streamlit_app.py`)
+Full-featured executive and analyst dashboard featuring:
+- Live complaint intake and real-time redaction inspector.
+- Human review queue with one-click resolution.
+- Category volume drill-down by sub-issue and historical trends.
+- Privacy protection metrics and K-anonymity audit comparisons.
+- Interactive causal graph visualizations and automated volume spike recommendations.
 
-**Observation:** the two approaches perform nearly identically overall,
-but diverge on categories with vocabulary overlap. Sentence-BERT trades
-precision for recall on categories like `Money transfer` and `Vehicle
-loan or lease` — its semantic embeddings pull related-but-distinct
-categories closer together, while TF-IDF's literal word-overlap draws
-sharper (if more superficial) boundaries. This tradeoff is discussed
-further in the project report.
+---
 
-### 4. Not Yet Built
+## Setup & Quickstart
 
-- Sentiment & emotion analysis module
-- Duplicate/semantic similarity detection (Sentence-BERT + FAISS)
-- Topic modeling (BERTopic)
-- Priority/severity prediction
-- Full pipeline orchestration (`src/pipeline/full_pipeline.py`)
-- FastAPI endpoints and Streamlit dashboard wiring
-- Docker containerization validation
+### 1. Environment & Dependencies
+```bash
+python -m venv .venv
+.venv\Scripts\activate          # Windows
+source .venv/bin/activate       # Linux / macOS
 
-## Setup
+pip install -r requirements.txt
+python -m spacy download en_core_web_lg
+```
 
-1. Create and activate a virtual environment:
-   ```bash
-   python -m venv venv
-   venv\Scripts\activate        # Windows
-   source venv/bin/activate     # macOS/Linux
-   ```
-2. Install requirements:
-   ```bash
-   pip install -r requirements.txt
-   python -m spacy download en_core_web_lg
-   ```
-3. Copy `.env.example` to `.env` and fill in any secrets (e.g. API keys
-   for LLM-assisted modules, if used).
-4. Run individual modules directly to test them in isolation, e.g.:
-   ```bash
-   python -m src.redaction.evaluate_redaction
-   python -m src.classification.baseline_tfidf_svm
-   python -m src.classification.sentence_bert_classifier
-   python -m src.classification.distilbert_finetune
-   ```
-5. Once the full pipeline is wired up:
-   ```bash
-   uvicorn api.main:app --reload
-   streamlit run dashboard/streamlit_app.py
-   ```
+### 2. Run the Test Suite
+```bash
+python -m pytest tests -v
+```
 
-## Top-Level Folders
+### 3. Launch the API Server
+```bash
+uvicorn api.main:app --host 0.0.0.0 --port 8000 --reload
+```
+Interactive Swagger documentation is available at `http://localhost:8000/docs`.
 
-- `data/` — raw downloads (gitignored), processed/sampled datasets, and
-  evaluation datasets (`data/eval/synth_data.json`).
-- `models/` — saved model checkpoints (gitignored) and version notes.
-- `notebooks/` — exploratory and experimental notebooks.
-- `src/` — reusable Python modules:
-  - `src/data/` — dataset loading, cleaning, sampling
-  - `src/redaction/` — Presidio pipeline, custom recognizers, evaluation
-  - `src/classification/` — TF-IDF+SVM, Sentence-BERT, DistilBERT models
-  - `src/sentiment/`, `src/duplicate_detection/`, `src/topic_modeling/`,
-    `src/priority/` — planned modules
-  - `src/pipeline/` — end-to-end orchestration (planned)
-  - `src/utils/` — shared config and logging
-- `api/` — FastAPI application entrypoint, routes, and schemas.
-- `dashboard/` — Streamlit dashboard app.
-- `tests/` — regression tests for core workflows.
-- `scripts/` — standalone scripts for dataset creation and evaluation.
+### 4. Launch the Streamlit Dashboard
+```bash
+streamlit run dashboard/streamlit_app.py
+```
+Access the dashboard at `http://localhost:8501`.
 
-## Tech Stack
+---
 
-- **Redaction:** Microsoft Presidio, spaCy, custom regex recognizers
-- **Classification:** scikit-learn (TF-IDF, SVM, Logistic Regression),
-  Sentence-Transformers (`all-MiniLM-L6-v2`), HuggingFace `transformers`
-  (fine-tuned `distilbert-base-uncased`)
-- **Planned:** BERTopic, FAISS, FastAPI, Streamlit, Docker
+## Module Execution Guide
 
-## Notes on Methodology
+Run any individual module in isolation:
 
-- All three classification models are evaluated on an identical
-  consolidated label schema and identical train/test split
-  (`random_state=42`, stratified 80/20) to ensure a fair, apples-to-apples
-  comparison.
-- The PII evaluation dataset is fully synthetic (no real personal data),
-  generated with controlled ground-truth entity spans so redaction
-  precision/recall can be measured exactly.
-- Category consolidation (merging CFPB's revised taxonomy labels) improved
-  baseline classification accuracy from 56.86% to 74.38%, demonstrating
-  that label-schema cleanliness had a larger effect than model choice at
-  this stage.
+```bash
+# Evaluate PII Redaction
+python -m src.redaction.evaluate_redaction
+
+# Run Live Prediction CLI Demo
+python -m src.classification.live_predict
+
+# Run Hierarchical Prediction Spot-Check
+python -m src.classification.hierarchical_predict
+
+# Run K-Anonymity Privacy Audit & Mitigation
+python -m src.privacy.k_anonymity_audit
+python -m src.privacy.k_anonymity_mitigation
+
+# Rebuild Causal Root-Cause Graph
+python -m src.causal.build_causal_graph
+
+# Run Batch Dataset Processing
+python -m scripts.run_pipeline_batch
+```
