@@ -28,3 +28,7 @@ recognizer_sigs.txt
 
 # IDE
 .vscode/
+
+# Frontend
+node_modules/
+frontend/dist/

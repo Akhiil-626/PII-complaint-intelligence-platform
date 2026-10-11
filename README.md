@@ -135,17 +135,32 @@ python -m spacy download en_core_web_lg
 python -m pytest tests -v
 ```
 
-### 3. Launch the API Server
-```bash
-uvicorn api.main:app --host 0.0.0.0 --port 8000 --reload
-```
-Interactive Swagger documentation is available at `http://localhost:8000/docs`.
+### 3. How to Run (Full Stack React + FastAPI)
 
-### 4. Launch the Streamlit Dashboard
+Run the one-command startup script from PowerShell in the project root:
+```powershell
+.\start.ps1
+```
+This script automatically:
+1. Cleans port `8000` of any conflicting processes.
+2. Starts the FastAPI backend with asynchronous model warming on `http://localhost:8000` (docs at `http://localhost:8000/docs`).
+3. Starts the modern React + Vite + Tailwind + shadcn/ui dashboard on `http://localhost:5173`.
+
+Alternatively, start services individually:
+```bash
+# Terminal 1: Backend API
+uvicorn api.main:app --port 8000
+
+# Terminal 2: React Dashboard
+cd frontend
+npm run dev
+```
+
+### 4. Optional Streamlit Dashboard
 ```bash
 streamlit run dashboard/streamlit_app.py
 ```
-Access the dashboard at `http://localhost:8501`.
+Access the legacy dashboard at `http://localhost:8501`.
 
 ---
 

@@ -52,37 +52,13 @@ LOW_CONFIDENCE_THRESHOLD = 0.4
 
 OLLAMA_MODEL = "llama3.1:8b"
 
-SUMMARY_PROMPT_TEMPLATE = """Analyze the following customer complaint and generate a detailed complaint report.
-
-Complaint ID: {complaint_id}
-Category: {category}
-Sub-Issue Category: {sub_issue}
-Complaint Text:
-{complaint_text}
-
-Return the response in exactly this format:
-
-Complaint ID: <complaint ID>
-
-What the complaint is about:
-<Explain clearly what the customer's complaint is about in 2-3 sentences.>
-
-Main Category:
-<State the main complaint category.>
-
-Sub-Issue Category:
-<State the specific sub-issue or problem within the main category.>
-
-Detailed Summary:
-<Provide a detailed summary of what happened, the customer's problem, important details, and what the customer wants resolved. Use 3-5 sentences.>
-
-Important instructions:
-- Use only information provided in the complaint and classification results.
-- Do not invent facts, names, amounts, dates, or events.
-- Keep the summary clear and professional.
-- Do not include any PII that was removed during redaction.
-- Respond only with the requested report. No additional introduction or conclusion.
-"""
+SUMMARY_PROMPT_TEMPLATE = (
+    "Summarize the following customer complaint in exactly one or two sentences, "
+    "focusing on what happened and what the customer wants resolved. "
+    "Do not add any information not present in the complaint. "
+    "Respond with ONLY the summary text, no preamble, no quotes, no labels.\n\n"
+    "Complaint:\n{complaint_text}\n"
+)
 
 
 # ---------------------------------------------------------------------------
@@ -257,13 +233,15 @@ class LiveComplaintProcessor:
             response = ollama.chat(
                 model=OLLAMA_MODEL,
                 messages=[{"role": "user", "content": prompt}],
+                options={"num_predict": 80},
+                keep_alive="30m",
             )
 
             return response["message"]["content"].strip()
 
         except Exception as e:
             print(f"Warning: Ollama summary generation failed: {e}")
-            return "Summary generation unavailable."
+            return f"Summary generation unavailable: {e}"
 
     def _assess_agreement(self, model_comparison: Dict[str, Dict[str, Any]]) -> Dict[str, Any]:
         """Assess whether the three classifiers agree on this complaint.
