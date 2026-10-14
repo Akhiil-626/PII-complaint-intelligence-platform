@@ -3,7 +3,6 @@ import {
   BrowserRouter,
   Routes,
   Route,
-  Link,
   useLocation,
   Navigate,
 } from "react-router-dom"
@@ -15,41 +14,17 @@ import {
 import { getHealth, type HealthResponse } from "@/lib/api"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Separator } from "@/components/ui/separator"
 import { TooltipProvider } from "@/components/ui/tooltip"
 import { Toaster } from "@/components/ui/sonner"
-import {
-  SidebarProvider,
-  Sidebar,
-  SidebarHeader,
-  SidebarContent,
-  SidebarGroup,
-  SidebarGroupContent,
-  SidebarGroupLabel,
-  SidebarMenu,
-  SidebarMenuItem,
-  SidebarMenuButton,
-  SidebarInset,
-  SidebarTrigger,
-  SidebarFooter,
-} from "@/components/ui/sidebar"
-import {
-  LayoutDashboard,
-  Send,
-  ShieldCheck,
-  Network,
-  Inbox,
-  Sun,
-  Moon,
-  Sparkles,
-  Shield,
-} from "lucide-react"
+import { Sun, Moon } from "lucide-react"
 
+import TopNav from "@/components/TopNav"
 import Overview from "@/pages/Overview"
 import Submit from "@/pages/Submit"
 import Privacy from "@/pages/Privacy"
 import RootCauses from "@/pages/RootCauses"
 import ReviewQueue from "@/pages/ReviewQueue"
+import LandingPage from "@/pages/LandingPage"
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -59,14 +34,6 @@ const queryClient = new QueryClient({
     },
   },
 })
-
-const NAV_ITEMS = [
-  { title: "Overview", path: "/", icon: LayoutDashboard },
-  { title: "Submit Complaint", path: "/submit", icon: Send },
-  { title: "Privacy", path: "/privacy", icon: ShieldCheck },
-  { title: "Root Causes", path: "/root-causes", icon: Network },
-  { title: "Review Queue", path: "/review", icon: Inbox },
-]
 
 function HealthBadge() {
   const { data, isError, isLoading } = useQuery<HealthResponse>({
@@ -83,7 +50,7 @@ function HealthBadge() {
         className="bg-rose-500/15 text-rose-600 dark:text-rose-400 border-rose-500/30 gap-1.5 font-medium px-2.5 py-1 text-xs overflow-hidden"
       >
         <span className="h-2 w-2 rounded-full bg-rose-500 shrink-0" />
-        <span className="group-data-[collapsible=icon]:hidden truncate">API offline</span>
+        <span className="truncate">API offline</span>
       </Badge>
     )
   }
@@ -95,7 +62,7 @@ function HealthBadge() {
         className="bg-muted text-muted-foreground border-border gap-1.5 font-medium px-2.5 py-1 text-xs overflow-hidden"
       >
         <span className="h-2 w-2 rounded-full bg-muted-foreground animate-ping shrink-0" />
-        <span className="group-data-[collapsible=icon]:hidden truncate">Checking...</span>
+        <span className="truncate">Checking...</span>
       </Badge>
     )
   }
@@ -107,7 +74,7 @@ function HealthBadge() {
         className="bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border-emerald-500/30 gap-1.5 font-medium px-2.5 py-1 text-xs overflow-hidden"
       >
         <span className="h-2 w-2 rounded-full bg-emerald-500 shrink-0" />
-        <span className="group-data-[collapsible=icon]:hidden truncate">Models ready</span>
+        <span className="truncate">Models ready</span>
       </Badge>
     )
   }
@@ -118,7 +85,7 @@ function HealthBadge() {
       className="bg-amber-500/15 text-amber-600 dark:text-amber-400 border-amber-500/30 gap-1.5 font-medium px-2.5 py-1 text-xs overflow-hidden"
     >
       <span className="h-2 w-2 rounded-full bg-amber-500 animate-pulse shrink-0" />
-      <span className="group-data-[collapsible=icon]:hidden truncate">Models loading</span>
+      <span className="truncate">Models loading</span>
     </Badge>
   )
 }
@@ -153,105 +120,43 @@ function ThemeToggle() {
   )
 }
 
-function AppSidebar() {
-  const location = useLocation()
-
-  return (
-    <Sidebar collapsible="icon" className="overflow-hidden">
-      <SidebarHeader className="border-b px-4 py-3 overflow-hidden">
-        <div className="flex items-center gap-2.5 overflow-hidden">
-          <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-            <Shield className="h-4 w-4" />
-          </div>
-          <div className="flex flex-col min-w-0 overflow-hidden group-data-[collapsible=icon]:hidden">
-            <span className="text-sm font-semibold truncate leading-none">Privacy Intelligence</span>
-            <span className="text-[11px] text-muted-foreground mt-0.5 truncate">CFPB ML Engine</span>
-          </div>
-        </div>
-      </SidebarHeader>
-
-      <SidebarContent className="overflow-hidden">
-        <SidebarGroup>
-          <SidebarGroupLabel className="group-data-[collapsible=icon]:hidden truncate">
-            Navigation
-          </SidebarGroupLabel>
-          <SidebarGroupContent>
-            <SidebarMenu>
-              {NAV_ITEMS.map((item) => {
-                const Icon = item.icon
-                const isActive = location.pathname === item.path
-                return (
-                  <SidebarMenuItem key={item.path}>
-                    <SidebarMenuButton
-                      render={
-                        <Link
-                          to={item.path}
-                          className={`flex items-center gap-2.5 px-3 py-2 rounded-md transition-colors overflow-hidden ${
-                            isActive
-                              ? "bg-accent text-accent-foreground font-medium"
-                              : "text-muted-foreground hover:bg-muted hover:text-foreground"
-                          }`}
-                        />
-                      }
-                      isActive={isActive}
-                      tooltip={item.title}
-                    >
-                      <Icon className="h-4 w-4 shrink-0" />
-                      <span className="group-data-[collapsible=icon]:hidden truncate">{item.title}</span>
-                    </SidebarMenuButton>
-                  </SidebarMenuItem>
-                )
-              })}
-            </SidebarMenu>
-          </SidebarGroupContent>
-        </SidebarGroup>
-      </SidebarContent>
-
-      <SidebarFooter className="border-t p-3 overflow-hidden space-y-2">
-        <div className="flex items-center overflow-hidden group-data-[collapsible=icon]:justify-center">
-          <HealthBadge />
-        </div>
-        <div className="flex items-center gap-2 text-xs text-muted-foreground overflow-hidden">
-          <Sparkles className="h-3.5 w-3.5 text-primary shrink-0" />
-          <span className="group-data-[collapsible=icon]:hidden truncate">k-Anonymity Verified</span>
-        </div>
-      </SidebarFooter>
-    </Sidebar>
-  )
-}
-
 function AppLayout() {
   return (
-    <div className="flex min-h-screen w-full bg-background text-foreground">
-      <AppSidebar />
-      <SidebarInset className="flex flex-col flex-1 min-w-0">
-        <header className="sticky top-0 z-40 flex h-14 shrink-0 items-center justify-between border-b bg-background/95 backdrop-blur px-4 lg:px-6">
-          <div className="flex items-center gap-3">
-            <SidebarTrigger />
-            <Separator orientation="vertical" className="h-4" />
-            <span className="font-semibold text-base sm:text-lg tracking-tight">
-              PII Complaint Intelligence Platform
-            </span>
-          </div>
+    <div className="min-h-screen w-full bg-background text-foreground flex flex-col">
+      <TopNav
+        rightControls={
           <div className="flex items-center gap-3">
             <HealthBadge />
             <ThemeToggle />
           </div>
-        </header>
-
-        <main className="flex-1 p-4 md:p-6 lg:p-8 max-w-7xl w-full mx-auto">
-          <Routes>
-            <Route path="/" element={<Overview />} />
-            <Route path="/submit" element={<Submit />} />
-            <Route path="/privacy" element={<Privacy />} />
-            <Route path="/root-causes" element={<RootCauses />} />
-            <Route path="/review" element={<ReviewQueue />} />
-            <Route path="*" element={<Navigate to="/" replace />} />
-          </Routes>
-        </main>
-      </SidebarInset>
+        }
+      />
+      {/* Layout-level padding-top using calc(var(--nav-h) + 24px) ensures full header visibility */}
+      <main
+        className="flex-1 px-4 pb-4 md:px-6 md:pb-6 lg:px-8 lg:pb-8 max-w-7xl w-full mx-auto"
+        style={{ paddingTop: "calc(var(--nav-h, 48px) + 24px)" }}
+      >
+        <Routes>
+          <Route path="/overview" element={<Overview />} />
+          <Route path="/submit" element={<Submit />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/root-causes" element={<RootCauses />} />
+          <Route path="/review" element={<ReviewQueue />} />
+          <Route path="*" element={<Navigate to="/overview" replace />} />
+        </Routes>
+      </main>
     </div>
   )
+}
+
+function MainRoutes() {
+  const location = useLocation()
+
+  if (location.pathname === "/") {
+    return <LandingPage />
+  }
+
+  return <AppLayout />
 }
 
 export default function App() {
@@ -259,9 +164,7 @@ export default function App() {
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <BrowserRouter>
-          <SidebarProvider>
-            <AppLayout />
-          </SidebarProvider>
+          <MainRoutes />
           <Toaster />
         </BrowserRouter>
       </TooltipProvider>
