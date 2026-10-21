@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query"
 import {
   submitComplaint,
@@ -6,6 +6,9 @@ import {
   type ProcessComplaintResponse,
   type LiveSubmissionRecord,
 } from "@/lib/api"
+import SafeguardBadges from "@/components/complaint/SafeguardBadges"
+import RedactionComparison from "@/components/complaint/RedactionComparison"
+import ModelConfidence from "@/components/complaint/ModelConfidence"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Textarea } from "@/components/ui/textarea"
@@ -36,8 +39,15 @@ import { toast } from "sonner"
 
 export default function Submit() {
   const [complaintText, setComplaintText] = useState("")
+  const [submittedText, setSubmittedText] = useState("")
   const [lastResult, setLastResult] = useState<ProcessComplaintResponse | null>(null)
   const queryClient = useQueryClient()
+
+  useEffect(() => {
+    return () => {
+      setSubmittedText("")
+    }
+  }, [])
 
   const {
     data: recentSubmissions,
@@ -51,7 +61,8 @@ export default function Submit() {
 
   const mutation = useMutation({
     mutationFn: (text: string) => submitComplaint(text),
-    onSuccess: (data) => {
+    onSuccess: (data, variables) => {
+      setSubmittedText(variables)
       setLastResult(data)
       toast.success("Complaint processed successfully", {
         description: `Generated Complaint ID: ${data.complaint_id}`,
@@ -75,11 +86,13 @@ export default function Submit() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    if (!complaintText.trim()) {
+    const trimmed = complaintText.trim()
+    if (!trimmed) {
       toast.error("Please enter complaint text before submitting.")
       return
     }
-    mutation.mutate(complaintText.trim())
+    setSubmittedText("")
+    mutation.mutate(trimmed)
   }
 
   const handleFillSample = (sample: string) => {
@@ -364,6 +377,27 @@ export default function Submit() {
               )}
             </CardContent>
           </Card>
+
+          {/* Safeguard Badges */}
+          <SafeguardBadges
+            leakCheck={lastResult.leak_check}
+            scopeCheck={lastResult.scope_check}
+            agreement={lastResult.agreement}
+          />
+
+          {/* Redaction Comparison */}
+          <RedactionComparison
+            submittedText={submittedText}
+            entities={lastResult.entities_redacted}
+            redactedText={lastResult.redacted_text}
+          />
+
+          {/* Model Confidence & Consensus */}
+          <ModelConfidence
+            modelComparison={lastResult.model_comparison}
+            agreement={lastResult.agreement}
+            finalDomain={lastResult.final_classification.domain}
+          />
         </div>
       )}
 

@@ -129,6 +129,20 @@ export interface FinalClassification {
   sub_issue_confidence: number
 }
 
+export interface LeakCheck {
+  enabled: boolean
+  leak_count: number
+  leak_types: string[]
+  error?: string | null
+}
+
+export interface ScopeCheck {
+  enabled: boolean
+  in_scope: boolean
+  score: number
+  threshold: number
+}
+
 export interface ProcessComplaintResponse {
   complaint_id: string
   timestamp: string
@@ -138,6 +152,8 @@ export interface ProcessComplaintResponse {
   model_comparison: ModelComparison
   agreement: Agreement
   final_classification: FinalClassification
+  leak_check?: LeakCheck
+  scope_check?: ScopeCheck
 }
 
 export interface ResolveResponse {
