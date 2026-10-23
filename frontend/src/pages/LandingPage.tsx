@@ -330,7 +330,7 @@ export default function LandingPage() {
 
   const handleGetStarted = (e: React.MouseEvent) => {
     e.preventDefault()
-    navigate("/overview")
+    navigate("/choose-role")
   }
 
   return (
@@ -413,7 +413,7 @@ export default function LandingPage() {
           }}
         >
           {/* Announcement Pill */}
-          <Link to="/overview" className="landing-pill" onClick={handleGetStarted}>
+          <Link to="/choose-role" className="landing-pill" onClick={handleGetStarted}>
             <span className="landing-pill-label">
               Zero PII Leaks · 100% Redaction Recall
             </span>

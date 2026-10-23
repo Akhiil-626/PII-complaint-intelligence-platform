@@ -28,8 +28,8 @@ def _save_submission_to_csv(result: Dict[str, Any], source: str = "api") -> None
         "tfidf_prediction": result["model_comparison"]["tfidf_svm"]["category"],
         "sbert_prediction": result["model_comparison"]["sentence_bert_logreg"]["category"],
         "distilbert_prediction": result["model_comparison"]["distilbert"]["category"],
-        "needs_review": result["agreement"]["needs_review"],
-        "review_reason": result["agreement"].get("review_reason") or "",
+        "needs_review": True,
+        "review_reason": result["agreement"].get("review_reason") or "Customer submission awaiting review",
         "sentiment": result["sentiment"]["sentiment"],
         "urgency_score": result["sentiment"]["urgency_score"],
         "num_entities_redacted": len(result["entities_redacted"]),
@@ -107,7 +107,7 @@ def get_review_queue() -> List[Dict[str, Any]]:
     if "resolved" not in df.columns:
         df["resolved"] = False
 
-    flagged = df[(df["needs_review"] == True) & (df["resolved"] != True)]
+    flagged = df[(df["needs_review"] == True) & (df["resolved"] != True)].iloc[::-1]
     return flagged.to_dict(orient="records")
 
 

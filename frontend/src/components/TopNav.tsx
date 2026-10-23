@@ -7,21 +7,24 @@ import {
   Network,
   Inbox,
   ChevronRight,
+  ArrowLeftRight,
 } from "lucide-react"
+import { useRole, type UserRole } from "@/lib/role"
 import "./TopNav.css"
 
 export interface NavItem {
   label: string
   path: string
   icon: React.ElementType
+  roles: UserRole[]
 }
 
 export const NAV_ITEMS: NavItem[] = [
-  { label: "Overview", path: "/overview", icon: LayoutDashboard },
-  { label: "Submit Complaint", path: "/submit", icon: Send },
-  { label: "Privacy", path: "/privacy", icon: ShieldCheck },
-  { label: "Root Causes", path: "/root-causes", icon: Network },
-  { label: "Review Queue", path: "/review", icon: Inbox },
+  { label: "Overview", path: "/overview", icon: LayoutDashboard, roles: ["company"] },
+  { label: "Submit Complaint", path: "/submit", icon: Send, roles: ["customer"] },
+  { label: "Privacy", path: "/privacy", icon: ShieldCheck, roles: ["company", "customer"] },
+  { label: "Root Causes", path: "/root-causes", icon: Network, roles: ["company"] },
+  { label: "Review Queue", path: "/review", icon: Inbox, roles: ["company"] },
 ]
 
 interface TopNavProps {
@@ -32,15 +35,17 @@ interface TopNavProps {
 export default function TopNav({ scrollProgress, rightControls }: TopNavProps) {
   const location = useLocation()
   const navigate = useNavigate()
+  const { role, clearRole } = useRole()
   const isLanding = location.pathname === "/"
+  const isChooseRole = location.pathname === "/choose-role"
 
-  const [scrolled, setScrolled] = useState(!isLanding)
+  const [scrolled, setScrolled] = useState(!isLanding && !isChooseRole)
   const [mobileOpen, setMobileOpen] = useState(false)
 
   // Track scroll position on landing page
   useEffect(() => {
     if (!isLanding) {
-      setScrolled(true)
+      setScrolled(!isChooseRole)
       return
     }
 
@@ -51,7 +56,7 @@ export default function TopNav({ scrollProgress, rightControls }: TopNavProps) {
     handleScroll()
     window.addEventListener("scroll", handleScroll, { passive: true })
     return () => window.removeEventListener("scroll", handleScroll)
-  }, [isLanding])
+  }, [isLanding, isChooseRole])
 
   // Close mobile sheet on route change
   useEffect(() => {
@@ -83,16 +88,31 @@ export default function TopNav({ scrollProgress, rightControls }: TopNavProps) {
   const handleGetStarted = (e: React.MouseEvent) => {
     e.preventDefault()
     setMobileOpen(false)
-    navigate("/overview")
+    navigate("/choose-role")
   }
 
-  const isSolid = !isLanding || scrolled
+  const handleSwitchRole = () => {
+    clearRole()
+    setMobileOpen(false)
+    navigate("/choose-role")
+  }
+
+  const isSolid = (!isLanding && !isChooseRole) || scrolled
+
+  // Single source of truth nav filtering:
+  // - Landing page: preserves original look (all nav items)
+  // - Dashboard: filtered by active role
+  const visibleNavItems = isLanding
+    ? NAV_ITEMS
+    : role
+    ? NAV_ITEMS.filter((item) => item.roles.includes(role))
+    : NAV_ITEMS
 
   return (
     <header
       className={`top-nav-wrapper ${isSolid ? "is-solid" : "is-landing-top"} ${
         isLanding ? "is-landing" : ""
-      }`}
+      } ${isChooseRole ? "is-choose-role" : ""}`}
     >
       {/* Scroll progress indicator for landing page */}
       {isLanding && scrollProgress !== undefined && scrollProgress > 0 && (
@@ -104,7 +124,7 @@ export default function TopNav({ scrollProgress, rightControls }: TopNavProps) {
       )}
 
       <div className="top-nav-inner">
-        {/* Left: Logo + Wordmark */}
+        {/* Left: Logo + Wordmark (Always links to '/') */}
         <Link
           to="/"
           className="top-nav-logo"
@@ -139,30 +159,32 @@ export default function TopNav({ scrollProgress, rightControls }: TopNavProps) {
           <span className="top-nav-logo-text">PII Complaint Intelligence</span>
         </Link>
 
-        {/* Center: Desktop Navigation Links */}
-        <nav className="top-nav-links" aria-label="Primary navigation">
-          {NAV_ITEMS.map((item) => {
-            const isActive =
-              location.pathname === item.path ||
-              (item.path !== "/" && location.pathname.startsWith(item.path))
-            return (
-              <Link
-                key={item.path}
-                to={item.path}
-                className={`top-nav-item ${isActive ? "is-active" : ""}`}
-                aria-current={isActive ? "page" : undefined}
-              >
-                {item.label}
-              </Link>
-            )
-          })}
-        </nav>
+        {/* Center: Desktop Navigation Links (Hidden on /choose-role) */}
+        {!isChooseRole && (
+          <nav className="top-nav-links" aria-label="Primary navigation">
+            {visibleNavItems.map((item) => {
+              const isActive =
+                location.pathname === item.path ||
+                (item.path !== "/" && location.pathname.startsWith(item.path))
+              return (
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  className={`top-nav-item ${isActive ? "is-active" : ""}`}
+                  aria-current={isActive ? "page" : undefined}
+                >
+                  {item.label}
+                </Link>
+              )
+            })}
+          </nav>
+        )}
 
-        {/* Right: Actions / Controls */}
+        {/* Right: Actions / Controls (Nothing on /choose-role) */}
         <div className="top-nav-right">
           {isLanding ? (
             <Link
-              to="/overview"
+              to="/choose-role"
               className="top-nav-cta"
               onClick={handleGetStarted}
             >
@@ -183,35 +205,48 @@ export default function TopNav({ scrollProgress, rightControls }: TopNavProps) {
                 />
               </svg>
             </Link>
-          ) : (
-            rightControls
+          ) : isChooseRole ? null : (
+            <>
+              <button
+                type="button"
+                className="top-nav-switch-role"
+                onClick={handleSwitchRole}
+                aria-label="Switch role"
+              >
+                <ArrowLeftRight className="w-3.5 h-3.5" aria-hidden="true" />
+                <span>Switch role</span>
+              </button>
+              {rightControls}
+            </>
           )}
 
-          {/* Mobile hamburger toggle */}
-          <button
-            type="button"
-            className="top-nav-menu-toggle"
-            aria-label="Open navigation menu"
-            aria-expanded={mobileOpen}
-            onClick={() => setMobileOpen(true)}
-          >
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 20 20"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.8"
+          {/* Mobile hamburger toggle (Hidden on /choose-role) */}
+          {!isChooseRole && (
+            <button
+              type="button"
+              className="top-nav-menu-toggle"
+              aria-label="Open navigation menu"
+              aria-expanded={mobileOpen}
+              onClick={() => setMobileOpen(true)}
             >
-              <path d="M4 7H16" strokeLinecap="round" />
-              <path d="M4 13H16" strokeLinecap="round" />
-            </svg>
-          </button>
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.8"
+              >
+                <path d="M4 7H16" strokeLinecap="round" />
+                <path d="M4 13H16" strokeLinecap="round" />
+              </svg>
+            </button>
+          )}
         </div>
       </div>
 
       {/* Mobile Navigation Sheet */}
-      {mobileOpen && (
+      {mobileOpen && !isChooseRole && (
         <div
           className="top-nav-mobile-sheet"
           role="dialog"
@@ -276,7 +311,7 @@ export default function TopNav({ scrollProgress, rightControls }: TopNavProps) {
 
             <p className="top-nav-mobile-eyebrow">Navigation</p>
             <nav className="top-nav-mobile-links" aria-label="Mobile menu navigation">
-              {NAV_ITEMS.map((item) => {
+              {visibleNavItems.map((item) => {
                 const Icon = item.icon
                 const isActive =
                   location.pathname === item.path ||
@@ -303,7 +338,7 @@ export default function TopNav({ scrollProgress, rightControls }: TopNavProps) {
 
             {isLanding ? (
               <Link
-                to="/overview"
+                to="/choose-role"
                 className="top-nav-mobile-action"
                 onClick={handleGetStarted}
               >
@@ -325,8 +360,18 @@ export default function TopNav({ scrollProgress, rightControls }: TopNavProps) {
               </Link>
             ) : (
               <div className="top-nav-mobile-controls">
-                <span className="text-xs text-white/60">System Controls</span>
-                <div className="flex items-center gap-3">{rightControls}</div>
+                <button
+                  type="button"
+                  className="top-nav-mobile-switch-role"
+                  onClick={handleSwitchRole}
+                >
+                  <ArrowLeftRight className="w-4 h-4 opacity-70" aria-hidden="true" />
+                  <span>Switch role</span>
+                </button>
+                <div className="top-nav-mobile-controls-row">
+                  <span className="text-xs text-white/60">System Controls</span>
+                  <div className="flex items-center gap-3">{rightControls}</div>
+                </div>
               </div>
             )}
           </div>

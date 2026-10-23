@@ -31,6 +31,8 @@ export default function ReviewQueue() {
   } = useQuery<LiveSubmissionRecord[]>({
     queryKey: ["review-queue"],
     queryFn: getReviewQueue,
+    refetchOnMount: "always",
+    staleTime: 0,
   })
 
   const resolveMutation = useMutation({

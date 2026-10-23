@@ -12,6 +12,7 @@ import {
   useQuery,
 } from "@tanstack/react-query"
 import { getHealth, type HealthResponse } from "@/lib/api"
+import { RoleProvider, useRole, type UserRole } from "@/lib/role"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { TooltipProvider } from "@/components/ui/tooltip"
@@ -25,6 +26,7 @@ import Privacy from "@/pages/Privacy"
 import RootCauses from "@/pages/RootCauses"
 import ReviewQueue from "@/pages/ReviewQueue"
 import LandingPage from "@/pages/LandingPage"
+import ChooseRole from "@/pages/ChooseRole"
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -120,6 +122,44 @@ function ThemeToggle() {
   )
 }
 
+/**
+ * Route guard enforcing role-based access:
+ * - If no role is selected, redirect to /choose-role
+ * - If user's role is not allowed on this route, redirect to that role's home route
+ */
+function RoleGuard({
+  allowedRoles,
+  children,
+}: {
+  allowedRoles: UserRole[]
+  children: React.ReactNode
+}) {
+  const { role } = useRole()
+  const location = useLocation()
+
+  if (!role) {
+    return <Navigate to="/choose-role" replace state={{ from: location.pathname }} />
+  }
+
+  if (!allowedRoles.includes(role)) {
+    const home = role === "company" ? "/overview" : "/submit"
+    return <Navigate to={home} replace />
+  }
+
+  return <>{children}</>
+}
+
+/**
+ * Fallback route handler for unmatched paths within the app layout.
+ */
+function FallbackRoute() {
+  const { role } = useRole()
+  if (!role) {
+    return <Navigate to="/choose-role" replace />
+  }
+  return <Navigate to={role === "company" ? "/overview" : "/submit"} replace />
+}
+
 function AppLayout() {
   return (
     <div className="min-h-screen w-full bg-background text-foreground flex flex-col">
@@ -137,12 +177,54 @@ function AppLayout() {
         style={{ paddingTop: "calc(var(--nav-h, 48px) + 24px)" }}
       >
         <Routes>
-          <Route path="/overview" element={<Overview />} />
-          <Route path="/submit" element={<Submit />} />
-          <Route path="/privacy" element={<Privacy />} />
-          <Route path="/root-causes" element={<RootCauses />} />
-          <Route path="/review" element={<ReviewQueue />} />
-          <Route path="*" element={<Navigate to="/overview" replace />} />
+          {/* Company-only routes */}
+          <Route
+            path="/overview"
+            element={
+              <RoleGuard allowedRoles={["company"]}>
+                <Overview />
+              </RoleGuard>
+            }
+          />
+          <Route
+            path="/root-causes"
+            element={
+              <RoleGuard allowedRoles={["company"]}>
+                <RootCauses />
+              </RoleGuard>
+            }
+          />
+          <Route
+            path="/review"
+            element={
+              <RoleGuard allowedRoles={["company"]}>
+                <ReviewQueue />
+              </RoleGuard>
+            }
+          />
+
+          {/* Customer-only routes */}
+          <Route
+            path="/submit"
+            element={
+              <RoleGuard allowedRoles={["customer"]}>
+                <Submit />
+              </RoleGuard>
+            }
+          />
+
+          {/* Shared routes accessible to both roles */}
+          <Route
+            path="/privacy"
+            element={
+              <RoleGuard allowedRoles={["company", "customer"]}>
+                <Privacy />
+              </RoleGuard>
+            }
+          />
+
+          {/* Catch-all fallback */}
+          <Route path="*" element={<FallbackRoute />} />
         </Routes>
       </main>
     </div>
@@ -156,6 +238,10 @@ function MainRoutes() {
     return <LandingPage />
   }
 
+  if (location.pathname === "/choose-role") {
+    return <ChooseRole />
+  }
+
   return <AppLayout />
 }
 
@@ -163,10 +249,12 @@ export default function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <BrowserRouter>
-          <MainRoutes />
-          <Toaster />
-        </BrowserRouter>
+        <RoleProvider>
+          <BrowserRouter>
+            <MainRoutes />
+            <Toaster />
+          </BrowserRouter>
+        </RoleProvider>
       </TooltipProvider>
     </QueryClientProvider>
   )

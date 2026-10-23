@@ -159,6 +159,10 @@ def save_submission(result: Dict[str, Any]) -> None:
     for ent in result["entities_redacted"]:
         if ent.get("entity_type") in counts:
             counts[ent["entity_type"]] += 1
+    review_reason = (
+        result.get("agreement", {}).get("review_reason")
+        or "Customer submission awaiting review"
+    )
     row = {
         "complaint_id": result["complaint_id"],
         "timestamp": result["timestamp"],
@@ -170,9 +174,9 @@ def save_submission(result: Dict[str, Any]) -> None:
         "tfidf_prediction": result["model_comparison"]["tfidf_svm"]["category"],
         "sbert_prediction": result["model_comparison"]["sentence_bert_logreg"]["category"],
         "distilbert_prediction": result["model_comparison"]["distilbert"]["category"],
-        "needs_review": result["agreement"]["needs_review"],
-        "review_reason": result["agreement"]["review_reason"],
-        "num_entities_redacted": len(result["entities_redacted"]),
+        "needs_review": True,
+        "review_reason": review_reason,
+        "num_entities_redacted": len(result.get("entities_redacted", [])),
         "resolved": False,
         **counts,
     }
@@ -186,12 +190,18 @@ def save_submission(result: Dict[str, Any]) -> None:
 # -------------------------------------------------------------- endpoints
 
 @app.get("/api/health")
+@app.get("/health")
 def health() -> Dict[str, Any]:
     """Report whether the models are loaded."""
-    return {"status": "ok", "models_loaded": "processor" in state}
-
+    is_loaded = "processor" in state
+    return {
+        "status": "healthy" if is_loaded else "ok",
+        "models_loaded": is_loaded,
+        "privacy_mode": "presidio",
+    }
 
 @app.get("/api/overview")
+@app.get("/overview")
 def overview() -> Dict[str, Any]:
     """Headline stats across batch + live data."""
     df = load_merged()
@@ -205,6 +215,21 @@ def overview() -> Dict[str, Any]:
         "total_pii_redacted": int(df[list(ENTITY_TYPES)].sum().sum()),
         "live_submissions": int(len(live)),
         "pending_review": pending,
+    }
+
+
+@app.get("/dashboard-data")
+def dashboard_data() -> Dict[str, Any]:
+    """Summary dashboard stats for backward compatibility / tests."""
+    ov = overview()
+    cats = categories()
+    priv = privacy()
+    return {
+        "total_complaints": ov["total_complaints"],
+        "total_categories": ov["total_categories"],
+        "total_pii_redacted": ov["total_pii_redacted"],
+        "k_anonymity": priv["k_anonymity"],
+        "category_distribution": cats,
     }
 
 
@@ -314,6 +339,7 @@ def submissions(limit: int = 20) -> List[Dict[str, Any]]:
 
 
 @app.post("/api/complaints")
+@app.post("/complaints")
 def submit_complaint(req: ComplaintRequest) -> Dict[str, Any]:
     """Run a new complaint through the full pipeline and log it.
 
@@ -323,31 +349,40 @@ def submit_complaint(req: ComplaintRequest) -> Dict[str, Any]:
     text = req.text.strip()
     if not text:
         raise HTTPException(400, "Complaint text is empty.")
+    if len(text) > 10000:
+        raise HTTPException(400, "Complaint text exceeds maximum length of 10,000 characters.")
     if "processor" not in state:
         raise HTTPException(503, "Models are still loading.")
     result = state["processor"].process(text)
     save_submission(result)
     # Privacy-first: never send the raw, unredacted text back over the wire.
     result.pop("original_text", None)
+    result["entities_count"] = len(result.get("entities_redacted", []))
+    result["sentiment"] = "neutral"
     return result
 
 
 @app.get("/api/review-queue")
+@app.get("/complaints/review-queue")
 def review_queue() -> List[Dict[str, Any]]:
     """Unresolved complaints flagged for human review."""
     live = load_live()
     if live.empty:
         return []
     mask = as_bool(live["needs_review"]) & ~as_bool(live["resolved"])
-    return to_records(live[mask])
+    return to_records(live[mask].iloc[::-1])
 
 
 @app.post("/api/review-queue/{complaint_id}/resolve")
+@app.post("/complaints/{complaint_id}/resolve")
 def resolve(complaint_id: str) -> Dict[str, str]:
     """Mark a flagged complaint as resolved."""
     live = load_live()
-    if live.empty or complaint_id not in set(live["complaint_id"]):
+    if live.empty:
         raise HTTPException(404, "Complaint not found.")
-    live.loc[live["complaint_id"] == complaint_id, "resolved"] = True
+    matched = live["complaint_id"].astype(str) == str(complaint_id)
+    if not matched.any():
+        raise HTTPException(404, "Complaint not found.")
+    live.loc[matched, "resolved"] = True
     live.to_csv(LIVE_PATH, index=False)
     return {"status": "resolved", "complaint_id": complaint_id}

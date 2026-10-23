@@ -334,9 +334,98 @@
 
 .top-nav-mobile-controls {
   display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.top-nav-mobile-controls-row {
+  display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
+  width: 100%;
+}
+
+/* Switch role button on dashboard */
+.top-nav-switch-role {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  outline: none;
+  white-space: nowrap;
+}
+
+.top-nav-switch-role:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+}
+
+.top-nav-switch-role:focus-visible {
+  outline: 2px solid #52aeff;
+  outline-offset: 2px;
+}
+
+:root:not(.dark) .top-nav-wrapper.is-solid:not(.is-landing) .top-nav-switch-role {
+  background: rgba(15, 23, 42, 0.05);
+  border-color: rgba(15, 23, 42, 0.12);
+  color: #0f172a;
+}
+
+:root:not(.dark) .top-nav-wrapper.is-solid:not(.is-landing) .top-nav-switch-role:hover {
+  background: rgba(15, 23, 42, 0.1);
+  border-color: rgba(15, 23, 42, 0.2);
+}
+
+.top-nav-mobile-switch-role {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+  cursor: pointer;
+  transition: background 0.15s ease;
+  outline: none;
+  text-align: left;
+}
+
+.top-nav-mobile-switch-role:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.top-nav-mobile-switch-role:focus-visible {
+  outline: 2px solid #52aeff;
+  outline-offset: 2px;
+}
+
+/* Choose Role page special state */
+.top-nav-wrapper.is-choose-role {
+  background-color: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.top-nav-wrapper.is-choose-role .top-nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
 }
 
 @keyframes sheet-slide {
@@ -353,7 +442,8 @@
 /* Responsive */
 @media (max-width: 860px) {
   .top-nav-links,
-  .top-nav-right .top-nav-cta {
+  .top-nav-right .top-nav-cta,
+  .top-nav-right .top-nav-switch-role {
     display: none;
   }
   .top-nav-menu-toggle {

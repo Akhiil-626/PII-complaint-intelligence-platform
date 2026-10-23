@@ -57,6 +57,7 @@ export default function Submit() {
   } = useQuery<LiveSubmissionRecord[]>({
     queryKey: ["submissions"],
     queryFn: () => getSubmissions(20),
+    refetchOnMount: "always",
   })
 
   const mutation = useMutation({
@@ -69,6 +70,7 @@ export default function Submit() {
       })
       queryClient.invalidateQueries({ queryKey: ["submissions"] })
       queryClient.invalidateQueries({ queryKey: ["overview"] })
+      queryClient.invalidateQueries({ queryKey: ["review-queue"] })
     },
     onError: (err: any) => {
       const msg = err?.message || ""
@@ -89,6 +91,10 @@ export default function Submit() {
     const trimmed = complaintText.trim()
     if (!trimmed) {
       toast.error("Please enter complaint text before submitting.")
+      return
+    }
+    if (trimmed.length > 10000) {
+      toast.error("Complaint text is too long (maximum 10,000 characters).")
       return
     }
     setSubmittedText("")
@@ -468,9 +474,13 @@ export default function Submit() {
                         {row.redacted_text}
                       </TableCell>
                       <TableCell className="text-center whitespace-nowrap">
-                        {row.needs_review ? (
+                        {row.resolved ? (
+                          <Badge variant="outline" className="bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border-emerald-500/30 text-[10px]">
+                            Resolved
+                          </Badge>
+                        ) : row.needs_review ? (
                           <Badge variant="outline" className="bg-amber-500/15 text-amber-600 dark:text-amber-400 border-amber-500/30 text-[10px]">
-                            Flagged
+                            Pending Review
                           </Badge>
                         ) : (
                           <Badge variant="outline" className="bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border-emerald-500/30 text-[10px]">

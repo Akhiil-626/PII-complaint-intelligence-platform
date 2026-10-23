@@ -7,6 +7,9 @@ from api.main import app
 
 @pytest.fixture(scope="module")
 def client() -> TestClient:
+    from api.main import state, _load_models_worker
+    if "processor" not in state:
+        _load_models_worker()
     return TestClient(app)
 
 
@@ -60,3 +63,32 @@ def test_review_queue_and_resolve(client: TestClient) -> None:
     # 2. Test resolve 404 for invalid ID
     resolve_res = client.post("/complaints/NON_EXISTENT_ID/resolve")
     assert resolve_res.status_code == 404
+
+
+def test_submit_to_queue_flow(client: TestClient) -> None:
+    # 1. Submit a distinctive complaint
+    payload = {
+        "text": "Distinctive automated test complaint: Unrecognized fee on account 987654321 for user test@example.com."
+    }
+    submit_res = client.post("/api/complaints", json=payload)
+    assert submit_res.status_code == 200
+    cid = submit_res.json()["complaint_id"]
+
+    # 2. Check that it appears in the review queue
+    queue_res = client.get("/api/review-queue")
+    assert queue_res.status_code == 200
+    queue_items = queue_res.json()
+    queue_ids = [item["complaint_id"] for item in queue_items]
+    assert cid in queue_ids
+    # Check that newest submission is near the top
+    assert queue_items[0]["complaint_id"] == cid
+
+    # 3. Resolve the complaint
+    resolve_res = client.post(f"/api/review-queue/{cid}/resolve")
+    assert resolve_res.status_code == 200
+
+    # 4. Confirm it is removed from the review queue
+    updated_queue_res = client.get("/api/review-queue")
+    assert updated_queue_res.status_code == 200
+    updated_ids = [item["complaint_id"] for item in updated_queue_res.json()]
+    assert cid not in updated_ids
